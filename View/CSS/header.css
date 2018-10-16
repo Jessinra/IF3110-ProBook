@@ -1,0 +1,85 @@
+
+html {
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+}
+
+.nav-button {
+    background-color: #1284bf;
+    border: 0;
+    color: #ffffff;
+    font-size: 2.5em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 33.33%;
+
+}
+
+.nav-bar .active {
+    background-color: #ed642b;
+}
+
+.nav-button:hover {
+    background-color: #ed5340;
+}
+
+.header-bar {
+    background-color: #0dc6f1;
+    border: 0;
+    color: #ffffff;
+    display: flex;
+    font-size: 2.5em;
+    height: 100px;
+    width: 100%;
+}
+
+.header-bar .title {
+    padding-left: 3%;
+}
+
+.header-bar .title .title-highlight {
+    color: #dbd022;
+}
+
+.header-bar .username {
+    float: right;
+    max-height: 100%;
+    padding-right: 3%;
+    width: 100%;
+}
+
+.header-bar .username a {
+    align-self: center;
+    color: #FFFFFF;
+    font-size: 40%;
+    text-align: right;
+    text-decoration: underline #ffffff;
+    width: 100%;
+}
+
+.header-bar .username a:hover {
+    color: #605e5f;
+    text-decoration-color: #605e5f;
+}
+
+.header-bar .power-button {
+    background-color: #ed642b;
+    float: right;
+    width: auto;
+
+}
+
+#img-button-power {
+    height: auto;
+    width: auto;
+    padding: 15%;
+    max-height: 100%;
+    object-fit: contain;
+    overflow: auto
+
+}
