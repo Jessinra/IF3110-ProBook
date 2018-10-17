@@ -22,7 +22,7 @@
 </div>
 <div class="container search-bar">
     <div class="search-bar field">
-        <input type="text" id="form-search-query" placeholder="Input search terms..."/>
+        <input type="text" id="form-search-query" placeholder="Input search terms..." onclick="this.select()"/>
     </div>
     <button class="search-bar button" type="submit">Search</button>
 </div>
