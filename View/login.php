@@ -9,24 +9,24 @@
 <body>
 <div class="form">
     <div class="box">
-        <div class="judul">
-            <div id="tengah"><h1>LOGIN</h1></div>
+        <div class="title">
+            <div id="middle"><h1>L O G I N</h1></div>
         </div>
         <form action="#" method="post" onsubmit="return validateLogin()">
-            <table id="login">
+            <table>
                 <tr>
-                    <th class="masuk"><label>Username</label></th>
+                    <th class="table_header"><label>Username</label></th>
                     <th><input id="username" type="text" name="username" placeholder=""/></th>
                 </tr>
                 <tr>
-                    <th class="masuk"><label>Password</label></th>
+                    <th class="table_header"><label>Password</label></th>
                     <th><input id="password" type="password" name="password" placeholder=""/></th>
                 </tr>
             </table>
-            <label id="pindah"><a href="#">Don't have an account?</a></label>
+            <label id="move"><a href="#">Don't have an account?</a></label>
             <br>
             <button type="submit" id="submit" name="login">
-                LOGIN
+                L O G I N
             </button>
         </form>
     </div>
