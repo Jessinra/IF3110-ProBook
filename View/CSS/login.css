@@ -9,7 +9,7 @@ body {
 
 h1 {
     color: #000000;
-    font-family: "BebasNeue";
+    font-family: "BebasNeue", sans-serif;
     text-align: center;
     font-size: 40px;
 }
@@ -52,8 +52,7 @@ tr th.table_header {
     height: 300px;
     border: 6px solid #29B6F6;
     border-radius: 5px;
-    margin: 0 auto;
-    margin-top: 5%;
+    margin: 5% auto 0 auto;
 }
 
 .box {
@@ -61,7 +60,7 @@ tr th.table_header {
     background-image: radial-gradient(#c0c0c0 5%, transparent 0),
     radial-gradient(#c0c0c0 5%, transparent 0);
     background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
+    background-position: 0, 0, 15px, 15px;
     position: relative;
     width: 402px;
     height: 240px;
@@ -90,7 +89,7 @@ tr th.table_header {
     height: 40px;
     border: 1px solid #EF6C00;
     border-radius: 7px;
-    font-family: "BebasNeue";
+    font-family: "BebasNeue", sans-serif;
     font-size: 21px;
     margin-left: 158px;
     margin-top: 1%;
@@ -98,21 +97,27 @@ tr th.table_header {
     font-weight: bold;
 }
 
-a:link {
-    color: blue;
+#submit:hover{
+    border: 1px solid #4179ef;
+    color: #4179ef;
 }
 
-/* visited link */
+#submit:focus{
+    outline: none;
+}
+
+/*a:link {*/
+    /*color: blue;*/
+/*}*/
+
 a:visited {
-    color: black;
+    color: inherit;
 }
 
-/* mouse over link */
 a:hover {
-    color: red;
+    color: #4179ef;
 }
 
-/* selected link */
-a:active {
-    color: black;
-}
+/*a:active {*/
+    /*color: black;*/
+/*}*/
