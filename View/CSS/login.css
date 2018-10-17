@@ -4,93 +4,91 @@ body {
 
 h1 {
     color: #000000;
-    font-family: 'bebasreguler';
+    font-family: 'bebasreguler', sans-serif;
     text-align: center;
     font-size: 40px;
 }
 
 input[type=text], input[type=password] {
-	border: 1px solid #808080;
-	padding: 2px 4px;
-	margin: 2px 30px 2px 5px;
+    border: 1px solid #808080;
+    padding: 2px 4px;
+    margin: 2px 30px 2px 5px;
 }
 
 label {
-	color: #000000;
-	font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table {
-	margin-left: 12px;
+    margin-left: 12px;
 }
 
 tr th {
-	text-align: left;
-	font-size: 13px;
-	width: 135px;
+    text-align: left;
+    font-size: 13px;
+    width: 135px;
 }
 
 tr th input {
-	width: 150px;
+    width: 150px;
 }
 
 tr th.masuk {
-	font-size: 15px;
-	width: 50px;
-	padding: 4px 2px 4px 50px;
+    font-size: 15px;
+    width: 50px;
+    padding: 4px 2px 4px 50px;
 }
 
 .form {
-	background-color: #29B6F6;
+    background-color: #29B6F6;
     position: relative;
-	width: 404px;
-	height: 300px;
-	border: 6px solid #29B6F6;
-	border-radius: 5px;
-	margin: 0 auto;
-	margin-top: 5%;
+    width: 404px;
+    height: 300px;
+    border: 6px solid #29B6F6;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 
 .box {
-	background: white;
-	background-image:
-	  radial-gradient(#c0c0c0 5%, transparent 0), 
-	  radial-gradient(#c0c0c0 5%, transparent 0);
-	background-size: 30px 30px;
-	background-position: 0 0, 15px 15px;  
+    background: white;
+    background-image: radial-gradient(#c0c0c0 5%, transparent 0),
+    radial-gradient(#c0c0c0 5%, transparent 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
     position: relative;
-	width: 402px;
-	height: 240px;
-	border-radius: 0px;
-	margin: 30px 1px 30px 1px;
+    width: 402px;
+    height: 240px;
+    border-radius: 0;
+    margin: 30px 1px 30px 1px;
 }
 
 .judul {
-	margin: 0 auto;
-	display: flex;
+    margin: 0 auto;
+    display: flex;
 }
 
 #tengah {
-	width: 100%;
+    width: 100%;
 }
 
 #pindah {
-	font-size: 12px;
-	padding-left: 25px;
-	padding-top: 10px;
-	padding-top: 20px;
+    font-size: 12px;
+    padding-left: 25px;
+    padding-top: 20px;
 }
 
 #submit {
-	background-color: #ffffff;
-	width: 80px;
-	height: 40px;
-	border: 1px solid #EF6C00;
-	border-radius: 7px;
-	font-family: 'bebasreguler';
-	font-size: 21px;
-	margin-left: 158px;
-	margin-top: 1%;
-	color: #EF6C00;
-	font-weight: bold;
+    background-color: #ffffff;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #EF6C00;
+    border-radius: 7px;
+    font-family: 'bebasreguler', sans-serif;
+    font-size: 21px;
+    margin-left: 158px;
+    margin-top: 1%;
+    color: #EF6C00;
+    font-weight: bold;
 }

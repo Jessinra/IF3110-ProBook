@@ -1,27 +1,26 @@
 
-html {
-    font-family: Arial, sans-serif;
-    width: 100%;
-}
-
-.nav-bar {
+.nav-bar, .header-bar {
+    height: 50px;
     width: 100%;
     display: flex;
 }
 
-.nav-button {
-    background-color: #1284bf;
+.nav-bar .active {
+    background-color: #ed642b;
+}
+
+.nav-button, .header-bar {
     border: 0;
     color: #ffffff;
-    font-size: 2.5em;
+    font-family: "Arial", sans-serif;
+    font-size: 150%;
+}
+
+.nav-button {
+    background-color: #1284bf;
     padding-top: 1%;
     padding-bottom: 1%;
     width: 33.33%;
-
-}
-
-.nav-bar .active {
-    background-color: #ed642b;
 }
 
 .nav-button:hover {
@@ -30,12 +29,9 @@ html {
 
 .header-bar {
     background-color: #0dc6f1;
-    border: 0;
-    color: #ffffff;
-    display: flex;
-    font-size: 2.5em;
-    height: 100px;
-    width: 100%;
+    align-self: center;
+    align-items: center;
+    font-size: 150%;
 }
 
 .header-bar .title {
@@ -48,18 +44,16 @@ html {
 
 .header-bar .username {
     float: right;
-    max-height: 100%;
     padding-right: 3%;
-    width: 100%;
 }
 
 .header-bar .username a {
-    align-self: center;
     color: #FFFFFF;
-    font-size: 40%;
+    font-size: 50%;
     text-align: right;
     text-decoration: underline #ffffff;
     width: 100%;
+    margin-top: 6%;
 }
 
 .header-bar .username a:hover {
@@ -71,15 +65,12 @@ html {
     background-color: #ed642b;
     float: right;
     width: auto;
-
 }
 
-#img-button-power {
-    height: auto;
-    width: auto;
-    padding: 15%;
-    max-height: 100%;
+.header-bar .power-button img {
+    padding: 0 15% 0 15%;
+    margin: 5%;
+    max-height: 90%;
     object-fit: contain;
     overflow: auto
-
 }

@@ -1,4 +1,18 @@
+@font-face {
+    font-family: "Linotte";
+    src: url("fonts/Linotte/Linotte Regular.otf");
+}
+
+html {
+    width: 40%;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-image: url("../Src/background/64633879_p0.jpg");
+    background-size: 1366px 768px;
+}
 
 h1 {
-    font-family: "kristen ITC", sans-serif;
+    font-family: "Linotte", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ed642b;
+    font-size: 335%;
 }
