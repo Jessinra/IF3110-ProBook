@@ -1,10 +1,15 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("fonts/Bebas Neue/BebasNeue-Regular.ttf");
+}
+
 body {
     background-color: #ffffff;
 }
 
 h1 {
     color: #000000;
-    font-family: 'bebasreguler', sans-serif;
+    font-family: "BebasNeue";
     text-align: center;
     font-size: 40px;
 }
@@ -76,7 +81,7 @@ tr th.table_header {
 #move {
     font-size: 12px;
     padding-left: 25px;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 #submit {
@@ -85,10 +90,29 @@ tr th.table_header {
     height: 40px;
     border: 1px solid #EF6C00;
     border-radius: 7px;
-    font-family: 'bebasreguler', sans-serif;
+    font-family: "BebasNeue";
     font-size: 21px;
     margin-left: 158px;
     margin-top: 1%;
     color: #EF6C00;
     font-weight: bold;
+}
+
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: black;
 }

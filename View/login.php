@@ -10,7 +10,7 @@
 <div class="form">
     <div class="box">
         <div class="title">
-            <div id="middle"><h1>LOGIN</h1></div>
+            <div id="middle"><h1>L O G I N</h1></div>
         </div>
         <form action="#" method="post" onsubmit="return validateLogin()">
             <table>
@@ -26,7 +26,7 @@
             <label id="move"><a href="#">Don't have an account?</a></label>
             <br>
             <button type="submit" id="submit" name="login">
-                LOGIN
+                L O G I N
             </button>
         </form>
     </div>
