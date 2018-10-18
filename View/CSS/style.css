@@ -12,42 +12,42 @@ html {
     html {
         min-width: 400px;
         width: 80%;
-        padding: 0 12% 0 12%;
+        padding: 0 12%;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 750px) {
     html {
         width: 64%;
-        padding: 0 18% 0 18%;
+        padding: 0 18%;
     }
 }
 
 @media screen and (min-width: 750px) and (max-width: 900px) {
     html {
         width: 54%;
-        padding: 0 23% 0 23%;
+        padding: 0 23%;
     }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1050px) {
     html {
         width: 46%;
-        padding: 0 27% 0 27%;
+        padding: 0 27%;
     }
 }
 
 @media screen and (min-width: 1050px) and (max-width: 1200px) {
     html {
         width: 40%;
-        padding: 0 30% 0 30%;
+        padding: 0 30%;
     }
 }
 
 @media screen and (min-width: 1200px) {
     html {
         width: 40%;
-        padding: 0 30% 0 30%;
+        padding: 0 30%;
     }
 }
 
