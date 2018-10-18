@@ -29,4 +29,14 @@
 
 
 </body>
+
+
+<script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
+<script type="text/javascript" src="../View/JS/switch_pages.js"></script>
+<script>
+    window.onload = function(){
+        switch_to_browse();
+    };
+</script>
+
 </html>
