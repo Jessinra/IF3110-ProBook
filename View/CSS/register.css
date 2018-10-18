@@ -39,7 +39,7 @@ h1 {
 
 input {
     border: 1px solid #888888;
-    width: 87%;
+    width: 88%;
 }
 
 input.special{
@@ -59,7 +59,7 @@ label {
 
 th img {
    width:auto;
-   height:2%; 
+   height:10px; 
 }
 
 table {

@@ -14,18 +14,18 @@
         </div>
         <form action="#" method="post" onsubmit="return validateLogin()">
             <table>
-                <tr class=flex-container>
+                <tr>
                     <th class="table_header"><label>Username</label></th>
                     <th><input id="username" type="text" name="username" placeholder="" onclick="this.select()"/></th>
                 </tr>
-                <tr class=flex-container>
+                <tr>
                     <th class="table_header"><label>Password</label></th>
                     <th><input id="password" type="password" name="password" placeholder="" onclick="this.select()"/>
                     </th>
                 </tr>
             </table>
             <br>
-            <label id="move"><a href="#">Don't have an account?</a></label>
+            <label id="move"><a href="register.php">Don't have an account?</a></label>
             <br>
             <button type="submit" id="submit" name="login">
                 L O G I N

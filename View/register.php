@@ -29,7 +29,7 @@
                 <th><label>Email</label></th>
                 <th>
                     <input type="text" id="email" name="email" onkeyup="checkEmail(this.value)" placeholder=""/>
-                    <img src="src/register/v.png"/>
+                    <img src="src/register/x.png"/>
                 </th>
             </tr>
             <tr>
@@ -50,7 +50,7 @@
             </tr>
             </table>
             <br>
-            <label id="move"><a href="#">Don't have an account?</a></label>
+            <label id="move"><a href="login.php">Already have an account?</a></label>
             <br>
             <button type="submit" id="submit" name="login">
                 R E G I S T E R
