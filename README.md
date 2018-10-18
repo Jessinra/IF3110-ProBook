@@ -32,7 +32,7 @@ Setiap kelompok beranggotakan **3 orang dari kelas yang sama**. Jika jumlah maha
 
 ### Login
 
-![](mocks/login.png)
+![](mocks/done/login.png)
 
 Pengguna dapat melakukan login sebagai user. Login hanya membandingkan username dan password saja, dan tidak perlu proteksi apapun. Identitas pengguna yang sudah login akan disimpan sebagai cookie dalam browser (misal cookie menyimpan id=2 menandakan bahwa pengguna dengan id 2 sudah login). Identitas tersebut tidak boleh disimpan sebagai parameter HTTP GET. Jika cookie ini tidak ada, maka pengguna dianggap belum login dan aplikasi akan selalu mengarahkan (*redirect*) pengguna ke halaman ini, meskipun pengguna membuka halaman yang lain. Masa berlaku cookie ditentukan sendiri oleh peserta.
 
@@ -47,7 +47,7 @@ Pengguna dapat mendaftarkan diri sebagai user agar dapat menggunakan aplikasi in
 
 ### Search-Books
 
-![](mocks/search.png)
+![](mocks/done/search.png)
 
 Search-Books merupakan halaman utama yang ditampilkan ketika user telah login. Pada halaman Search-Books, terdapat sebuah input field dapat diisi pengguna untuk melakukan pencarian buku berdasarkan judul.
 
@@ -57,7 +57,7 @@ Perlu diperhatikan, pada bagian atas terdapat logo, tombol logout, dan tulisan d
 
 ### Search-Result
 
-![](mocks/search_result.png)
+![](mocks/done/search_result.png)
 
 Pada Search-Result, ditampilkan daftar buku dan jumlah hasil pencarian. Pada tiap entri buku ditampilkan judul, penulis, gambar, potongan sinopsis, serta rating dari buku tersebut. Jika tombol detail ditekan, pengguna akan dibawa ke halaman Book-Detail dari buku yang bersangkutan.
 

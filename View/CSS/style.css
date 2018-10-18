@@ -4,15 +4,20 @@
 }
 
 html {
-    background-image: url("../Src/background/64633879_p0.jpg");
+    background: url("../Src/background/64633879_p0.jpg") fixed;
     background-size: 1640px 922px;
+    padding-top:100px;
 }
 
 @media screen and (max-width: 600px) {
-    html {
+    html{
         min-width: 400px;
         width: 80%;
         padding: 0 12%;
+    }
+
+    .resp-element {
+        width: 82%;
     }
 }
 
@@ -21,12 +26,18 @@ html {
         width: 64%;
         padding: 0 18%;
     }
+    .resp-element {
+        width: 62%;
+    }
 }
 
 @media screen and (min-width: 750px) and (max-width: 900px) {
     html {
         width: 54%;
         padding: 0 23%;
+    }
+    .resp-element {
+        width: 52%;
     }
 }
 
@@ -35,6 +46,9 @@ html {
         width: 46%;
         padding: 0 27%;
     }
+    .resp-element {
+        width: 44%;
+    }
 }
 
 @media screen and (min-width: 1050px) and (max-width: 1200px) {
@@ -42,12 +56,18 @@ html {
         width: 40%;
         padding: 0 30%;
     }
+    .resp-element {
+        width: 38.8%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     html {
         width: 40%;
         padding: 0 30%;
+    }
+    .resp-element {
+        width: 38.8%;
     }
 }
 
@@ -59,4 +79,8 @@ h1 {
 
 .flex-container {
     display: flex;
+}
+
+.resp-element{
+    padding:0;
 }
