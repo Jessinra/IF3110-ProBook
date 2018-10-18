@@ -9,7 +9,11 @@
     background-color: #ed642b;
 }
 
-.nav-button, .header-bar {
+.nav-bar a{
+    flex-grow: 1;
+}
+
+.nav-button, .header-bar{
     border: 0;
     color: #ffffff;
     font-family: "Arial", sans-serif;
@@ -19,30 +23,21 @@
 .nav-button {
     background-color: #1284bf;
     padding: 0;
-    width: 33.33%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .nav-button:hover {
     background-color: #ed5340;
 }
 
-.nav-button a {
-    color: inherit;
-    text-decoration: none;
-    min-width: 100%;
-    min-height: 100%;
-    display: inline-block;
-}
-
-.nav-button a span {
+.nav-button span {
     font-size: 150%;
 }
 
 .header-bar {
     background-color: #0dc6f1;
-    align-self: center;
     align-items: center;
-    font-size: 150%;
 }
 
 .header-bar .title {
