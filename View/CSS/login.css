@@ -15,7 +15,7 @@ h1 {
 }
 
 input[type=text], input[type=password] {
-    border: 1px solid #808080;
+    border: 1px solid #888888;
     padding: 2px 4px;
     margin: 2px 30px 2px 5px;
 }
@@ -46,21 +46,22 @@ tr th.table_header {
 }
 
 .form {
-    background-color: #29B6F6;
+    background-color: #00AEEF;
     position: relative;
     width: 404px;
     height: 300px;
-    border: 6px solid #29B6F6;
+    border: 6px solid #00AEEF;
     border-radius: 5px;
     margin: 5% auto 0 auto;
 }
 
 .box {
     background: white;
-    background-image: radial-gradient(#c0c0c0 5%, transparent 0),
-    radial-gradient(#c0c0c0 5%, transparent 0);
+    background-image:
+    radial-gradient(#d3d3d3 8%, transparent 0), 
+    radial-gradient(#d3d3d3 8%, transparent 0);
     background-size: 30px 30px;
-    background-position: 0, 0, 15px, 15px;
+    background-position: 0 0, 15px 15px;
     position: relative;
     width: 402px;
     height: 240px;
@@ -87,37 +88,29 @@ tr th.table_header {
     background-color: #ffffff;
     width: 80px;
     height: 40px;
-    border: 1px solid #EF6C00;
+    border: 1px solid #f26600;
     border-radius: 7px;
     font-family: "BebasNeue", sans-serif;
     font-size: 21px;
     margin-left: 158px;
     margin-top: 1%;
-    color: #EF6C00;
+    color: #f26600;
     font-weight: bold;
 }
 
 #submit:hover{
-    border: 1px solid #4179ef;
-    color: #4179ef;
+    border: 1px solid #00AEEF;
+    color: #00AEEF;
 }
 
 #submit:focus{
     outline: none;
 }
 
-/*a:link {*/
-    /*color: blue;*/
-/*}*/
-
 a:visited {
     color: inherit;
 }
 
 a:hover {
-    color: #4179ef;
+    color: #00AEEF;
 }
-
-/*a:active {*/
-    /*color: black;*/
-/*}*/
