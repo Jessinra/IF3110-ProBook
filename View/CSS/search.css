@@ -116,13 +116,3 @@
 .search-result .button {
     margin: 0 3% 3% 0;
 }
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky-nav-bar {
-    position: fixed;
-    top: 0;
-}
-
-.sticky-nav-bar .nav-bar {
-    padding-top: 108px;
-}
