@@ -33,8 +33,11 @@ h1 {
     font-family: "BebasNeue", sans-serif;
     text-align: center;
     font-size: 3vw;
-    margin-block-start: 3%;
-    margin-block-end: 3%;
+
+    margin: 3%;
+    /*dont delete these 2 below, show warning but it's fine*/
+    /*margin-block-start: 3%;*/
+    /*margin-block-end: 3%;*/
 }
 
 input[type=text], input[type=password] {
@@ -55,11 +58,11 @@ table {
 tr th {
     text-align: left;
     font-weight: normal;
-    padding: 1% 0%;
+    padding: 1% 0;
 }
 
 tr th.table_header {
-    font-size: 1 vw;
+    font-size: 1vw;
     width: 45%;
     text-align: right;
 }
@@ -76,8 +79,7 @@ tr th.table_header {
 
 .box {
     background: white;
-    background-image:
-    radial-gradient(#d3d3d3 8%, transparent 0), 
+    background-image: radial-gradient(#d3d3d3 8%, transparent 0),
     radial-gradient(#d3d3d3 8%, transparent 0);
     background-size: 30px 30px;
     background-position: 0 0, 15px 15px;
@@ -89,7 +91,7 @@ tr th.table_header {
 }
 
 .title {
-    margin: 0% auto;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -114,16 +116,16 @@ tr th.table_header {
     margin-left: 40%;
     margin-top: 1%;
     margin-bottom: 3%;
-    padding: 1% 0%;
+    padding: 1% 0;
     color: #f26600;
 }
 
-#submit:hover{
+#submit:hover {
     border: 1px solid #00AEEF;
     color: #00AEEF;
 }
 
-#submit:focus{
+#submit:focus {
     outline: none;
 }
 

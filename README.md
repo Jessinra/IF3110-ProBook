@@ -41,7 +41,7 @@ Data yang disimpan pada cookie berupa `access token` yang dibangkitkan secara ra
 
 ### Register
 
-![](mocks/register.png)
+![](mocks/done/register.png)
 
 Pengguna dapat mendaftarkan diri sebagai user agar dapat menggunakan aplikasi ini. Pengguna tidak dapat mendaftarkan diri menggunakan email dan/atau username yang sudah pernah digunakan sebelumnya. **Validasi email dan username dilakukan menggunakan AJAX**. Jika email dan username valid akan ditandai dengan lambang centang seperti pada gambar. Setelah mendaftarkan diri, pengguna akan secara otomatis login dengan user yang baru didaftarkannya.
 

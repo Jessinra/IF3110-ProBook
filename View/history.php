@@ -33,17 +33,31 @@ $query_entry = array(
     'order-number' => 2,
 );
 
-for ($i=0; $i<10; $i++){
-    $query_result[$i] = $query_entry;
+for ($i = 0; $i < 5; $i++) {
+    $query_result[$i * 2] = $query_entry;
 }
 
+$query_entry = array(
+    'thumbnail' => "../View/Src/search_result/thumbnail_03.png",
+    'title' => "Megumi is cuter !",
+    'amount' => 2,
+    'review' => False,
+    'order-date' => "5 Maret 2018",
+    'order-number' => 33,
+);
+
+for ($i = 0; $i < 5; $i++) {
+    $query_result[$i * 2 + 1] = $query_entry;
+}
+
+ksort($query_result);
 ?>
 
 
 <?php foreach ($query_result as $query_entry) { ?>
     <div class="history container">
         <div class="history thumbnail">
-            <img src= "<?php echo $query_entry['thumbnail'] ?>" alt="search thumbnail">
+            <img src="<?php echo $query_entry['thumbnail'] ?>" alt="search thumbnail">
         </div>
 
         <div class="history description-left">
@@ -52,7 +66,15 @@ for ($i=0; $i<10; $i++){
             </div>
             <div>
                 <span id="amount">Jumlah : <?php echo $query_entry['amount'] ?></span><br>
-                <span id="review">Review : <?php echo $query_entry['review'] ?></span>
+                <span id="review">
+                    <?php
+                    if ($query_entry['review']) {
+                        echo "Anda sudah memberikan review";
+                    } else {
+                        echo "Belum direview";
+                    }
+                    ?>
+                </span>
             </div>
         </div>
 
@@ -61,10 +83,15 @@ for ($i=0; $i<10; $i++){
                 <span id="order-date"><?php echo $query_entry['order-date'] ?></span>
                 <span id="order-number">Nomor Order: #<?php echo $query_entry['order-number'] ?></span>
             </div>
+            <?php
+            if (!$query_entry['review']) { ?>
+                <a href="#">
+                    <button class="search-result button">Review</button>
+                </a>
+            <?php } ?>
         </div>
     </div>
 <?php } ?>
-
 
 
 </body>
@@ -73,7 +100,7 @@ for ($i=0; $i<10; $i++){
 <script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
 <script>
-    window.onload = function(){
+    window.onload = function () {
         switch_to_history();
     };
 </script>

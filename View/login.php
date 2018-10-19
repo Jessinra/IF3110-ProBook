@@ -15,11 +15,11 @@
         <form action="#" method="post" onsubmit="return validateLogin()">
             <table>
                 <tr>
-                    <th class="table_header"><label>Username    </label></th>
+                    <th class="table_header"><label>Username </label></th>
                     <th><input id="username" type="text" name="username" placeholder="" onclick="this.select()"/></th>
                 </tr>
                 <tr>
-                    <th class="table_header"><label>Password    </label></th>
+                    <th class="table_header"><label>Password </label></th>
                     <th><input id="password" type="password" name="password" placeholder="" onclick="this.select()"/>
                     </th>
                 </tr>
