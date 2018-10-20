@@ -21,8 +21,7 @@ h1 {
 
 input[type=text], input[type=password] {
     border: 1px solid #888888;
-    margin: 1% 7% 1% 12%;
-    width: 100%;
+    width: 90%;
 }
 
 label {
@@ -31,13 +30,13 @@ label {
 }
 
 table {
-    margin-left: 3%;
+    margin-left: 2%;
+    border-spacing: 10px 1em;
 }
 
 tr th {
     text-align: left;
     font-weight: normal;
-    padding: 1% 0;
 }
 
 tr th.table_header {
