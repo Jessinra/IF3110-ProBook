@@ -78,7 +78,7 @@ Tampilan notifikasi dibuat semirip mungkin dengan contoh.
 
 ### Profile
 
-![](mocks/profile.png)
+![](mocks/done/profile.png)
 
 Pada halaman ini, ditampilkan nama lengkap, username, email, alamat, nomor telepon, dan foto profil. Pada bagian kanan atas terdapat tombol edit, jika pengguna menekan tombol tersebut, pengguna dibawa ke halaman Edit-Profile.
 
@@ -100,7 +100,7 @@ Pada tiap entri pada history, terdapat tombol review. Jika tombol review ditekan
 
 ### Review
 
-![](mocks/review.png)
+![](mocks/done/review.png)
 
 Pada halaman ini, pengguna dapat memberikan review untuk buku yang dipesan berupa rating dan komentar. Review yang diberikan dari halaman ini akan muncul pada halaman Book-Detail dari buku yang di-review. Setelah selesai, user akan dibawa kembali ke halaman History.
 

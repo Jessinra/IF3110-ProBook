@@ -85,7 +85,7 @@ ksort($query_result);
             </div>
             <?php
             if (!$query_entry['review']) { ?>
-                <a href="#">
+                <a href="../View/review.php">
                     <button class="search-result button">Review</button>
                 </a>
             <?php } ?>
