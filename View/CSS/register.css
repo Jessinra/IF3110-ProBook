@@ -13,8 +13,6 @@ h1 {
     text-align: center;
     font-size: 3vw;
     margin: 3%;
-    /*margin-block-start: 3%;*/
-    /*margin-block-end: 3%;*/
 }
 
 input {
@@ -38,18 +36,22 @@ label {
 }
 
 th img {
-    width: auto;
-    height: 2%;
+    width: 6%;
+    height: inherit;
 }
 
 table {
     margin-left: 12px;
 }
 
+tr th.unique {
+}
+
 tr th {
     text-align: right;
     font-size: 0.8vw;
     font-weight: normal;
+    height: 3%;
 }
 
 tr th label {
