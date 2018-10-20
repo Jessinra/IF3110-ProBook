@@ -17,14 +17,24 @@
     ?>
 </div>
 
+<!--MOCK DATA-->
+<?php
+
+$book_details = array(
+        "title" => "Megumi are kawai!",
+        "thumbnail" => "../View/Src/search_result/thumbnail_03.png",
+        "author" => "Yamashita Kurada",
+)
+?>
+
 <div class="flex-container review-content">
     <div class="flex-container">
         <div class="flex-column review-book-detail">
-            <h1>Platelets are kawai!</h1>
-            <span>author</span>
+            <h1><?php echo $book_details['title'] ?></h1>
+            <span><?php echo $book_details['author'] ?></span>
         </div>
         <div class="review-thumbnail">
-            <img src="../View/Src/search_result/thumbnail_01.png" alt="thumbnail">
+            <img src="<?php echo $book_details['thumbnail'] ?>" alt="thumbnail">
         </div>
     </div>
 
@@ -46,14 +56,12 @@
     <form action="#" method="get">
         <div class="flex-container flex-column comment">
             <h2>Add Comment</h2>
-
-
             <textarea name="review" id=book-comment placeholder="Write your review here..."
                       onclick=this.select()></textarea>
-            <input align=top type="hidden" name="rating" id="number-star" value=0>
+            <input type="hidden" name="rating" id="number-star" value=0>
             <div class="flex-container">
-                <a href="#" id="button-back">
-                    <button>Back</button>
+                <a href="../View/history.php" id="button-back">
+                    <button type="button">Back</button>
                 </a>
                 <a id="button-submit">
                     <button type="submit">Submit</button>

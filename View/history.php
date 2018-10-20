@@ -85,7 +85,11 @@ ksort($query_result);
             </div>
             <?php
             if (!$query_entry['review']) { ?>
-                <a href="review.php">
+<<<<<<< HEAD
+                <a href="../View/review.php">
+=======
+                <a href="../View/review.php">
+>>>>>>> 8455020e57c4224dc0156d3e1710195c8f894c71
                     <button class="search-result button">Review</button>
                 </a>
             <?php } ?>

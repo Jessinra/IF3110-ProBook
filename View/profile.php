@@ -19,11 +19,11 @@
     <div class="profile home">
         <div class="profile edit-button">
             <button>
-                <img src="../View/Src/profile/sample/edit.png"/>
+                <img src="../View/Src/profile/icon/edit.png"/>
             </button>
         </div>
         <div class="profile picture center">
-            <img src="../View/Src/profile/sample/Jollybee-Logo.png"/>
+            <img src="../View/Src/profile/sample/profile_pict.png"/>
         </div>
         <div class="profile name center">
             Loli Bee
@@ -36,10 +36,10 @@
         <table>
             <tr class="field" id="profile-username">
                 <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/sample/user.png"/>
+                    <img class="icon" src="../View/Src/profile/icon/user.png"/>
                 </td>
                 <td class="label">
-                    Name
+                    Username
                 </td>
                 <td class="content" id="username">
                     <!-- UserName -->
@@ -48,7 +48,7 @@
             </tr>
             <tr class="field" id="profile-email">
                 <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/sample/email.png"/>
+                    <img class="icon" src="../View/Src/profile/icon/email.png"/>
                 </td>
                 <td class="label">
                     Email
@@ -60,7 +60,7 @@
             </tr>
             <tr class="field" id="profile-address">
                 <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/sample/address.png"/>
+                    <img class="icon" src="../View/Src/profile/icon/address.png"/>
                 </td>
                 <td class="label">
                     Address
@@ -72,7 +72,7 @@
             </tr>
             <tr class="field" id="profile-phone-number">
                 <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/sample/phone.png"/>
+                    <img class="icon" src="../View/Src/profile/icon/phone.png"/>
                 </td>
                 <td class="label">
                     Phone Number
