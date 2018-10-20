@@ -63,7 +63,7 @@ Pada Search-Result, ditampilkan daftar buku dan jumlah hasil pencarian. Pada tia
 
 ### Book-Detail
 
-![](mocks/detail.png)
+![](mocks/done/detail.png)
 
 Pada halaman ini, ditampilkan detail buku yang terdiri dari judul, penulis, gambar, rating, serta komentar dan rating dari user lain.
 

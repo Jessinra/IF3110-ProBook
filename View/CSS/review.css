@@ -1,4 +1,4 @@
-.review-content {
+.review-container {
     width: 90%;
     margin: 10% 5% 13% 5%;
     flex-flow: column;
@@ -72,9 +72,6 @@
 }
 
 .star-ratings span {
-    display: inline-block;
-    position: relative;
-    width: 6%;
     text-align: center;
     flex-basis: 0;
     flex-grow: 1;

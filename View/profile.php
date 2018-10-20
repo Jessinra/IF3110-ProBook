@@ -23,7 +23,7 @@
             </button>
         </div>
         <div class="profile picture center">
-            <img src="../View/Src/profile/icon/profile_pict.png"/>
+            <img src="../View/Src/profile/sample/profile_pict.png"/>
         </div>
         <div class="profile name center">
             Loli Bee

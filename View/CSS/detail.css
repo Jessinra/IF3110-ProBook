@@ -1,0 +1,147 @@
+
+.detail-container {
+    width: 90%;
+    margin: 10% 5% 13% 5%;
+    flex-flow: column;
+    font-family: "Linotte", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-size: 120%;
+    color: white;
+}
+
+.book-details {
+    flex-grow: 3;
+    flex-basis: 0;
+    margin: 0 3% 0 0;
+}
+
+.book-details h1 {
+    margin: 0 0 1% 0;
+}
+
+.book-details .description {
+    margin: 5% 0 0 0;
+    text-align: justify;
+}
+
+.thumbnail-ratings {
+    flex-grow: 1;
+    flex-basis: 0;
+
+    margin: 3% 0 0 0;
+    text-align: center;
+}
+
+.thumbnail-ratings img {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 5%;
+    border: #00374c solid 1px;
+}
+
+.star-ratings {
+    color: #feef39;
+    font-size: 200%;
+
+    display: flex;
+    cursor: default;
+}
+
+.thumbnail-ratings .number-rating {
+    font-weight: bold;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.star-ratings span {
+
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.book-order h2, .book-review h2 {
+    color: white;
+    /*THE REAL COLOR SHOULD BE:*/
+    /*color: #00374c;*/
+    font-size: 240%;
+    margin: 10% 0 2% 0;
+}
+
+.order-quantity [type="number"] {
+    border: 0;
+    padding: 1%;
+    margin: 0 0 0 3%;
+    width: 10%;
+    border-radius: 3px;
+}
+
+.order-submit {
+    text-align: right;
+}
+
+.order-submit button {
+    border-radius: 5px;
+    width: 5.5em;
+    height: 1.7em;
+    margin: 3% 0;
+    font-size: 120%;
+    border: 0;
+    background-color: #0dc6f1;
+    color: #FFFFFF;
+}
+
+.order-submit button:focus {
+    outline: none;
+}
+
+.order-submit button:hover {
+    background-color: #f26600;
+}
+
+.review-container {
+    margin: 0 0 5% 0;
+}
+
+.review-container .thumbnail {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding-top: 2%;
+}
+
+.review-container .thumbnail img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: #00374C solid 1px;
+}
+
+.review-container .review-text {
+    flex-grow: 5;
+    flex-basis: 0;
+    margin: 0 3%;
+    padding-top: 2%;
+    text-align: justify;
+}
+
+.review-container .review-ratings {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+
+.review-container .username {
+    font-size: 130%;
+}
+
+.review-container .star-ratings {
+    font-size: 300%;
+}

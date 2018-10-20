@@ -27,7 +27,7 @@ $book_details = array(
 )
 ?>
 
-<div class="flex-container review-content">
+<div class="flex-container review-container">
     <div class="flex-container">
         <div class="flex-column review-book-detail">
             <h1><?php echo $book_details['title'] ?></h1>

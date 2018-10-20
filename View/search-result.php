@@ -89,7 +89,7 @@ ksort($query_result);
         </div>
 
         <div>
-            <a href="#">
+            <a href="../View/detail.php?title=<?php echo $query_entry['title']?>">
                 <button class="search-result button">Detail</button>
             </a>
         </div>
