@@ -20,15 +20,15 @@
                 </tr>
                 <tr>
                     <th><label>Username</label></th>
-                    <th>
+                    <th class="unique">
                         <input type="text" id="username" name="username" onkeyup="checkUsername(this.value)"
                                placeholder=""/>
                         <img src="../View/Src/register/v.png"/>
                     </th>
                 </tr>
-                <tr>
+                <tr >
                     <th><label>Email</label></th>
-                    <th>
+                    <th class="unique">
                         <input type="text" id="email" name="email" onkeyup="checkEmail(this.value)" placeholder=""/>
                         <img src="../View/Src/register/x.png"/>
                     </th>
