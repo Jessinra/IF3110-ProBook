@@ -24,12 +24,12 @@ input {
 
 input.special {
     border: 1px solid #888888;
-    width: 95%;
+    width: 96%;
 }
 
 textarea {
     border: 1px solid #888888;
-    width: 93%;
+    width: 93.5%;
 }
 
 label {
@@ -48,7 +48,7 @@ table {
 
 tr th {
     text-align: right;
-    font-size: 13px;
+    font-size: 0.8vw;
     font-weight: normal;
 }
 
