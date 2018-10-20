@@ -58,7 +58,7 @@ $book_details = array(
             <h2>Add Comment</h2>
             <textarea name="review" id=book-comment placeholder="Write your review here..."
                       onclick=this.select()></textarea>
-            <input align=top type="hidden" name="rating" id="number-star" value=0>
+            <input type="hidden" name="rating" id="number-star" value=0>
             <div class="flex-container">
                 <a href="../View/history.php" id="button-back">
                     <button type="button">Back</button>
