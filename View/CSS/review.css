@@ -152,12 +152,12 @@
 
 #button-back button {
     background-color: #ffffff;
-    color: #ed642b;
-    border: #ed642b solid 1px;
+    color: #f26600;
+    border: #f26600 solid 1px;
 }
 
 #button-back button:hover {
-    background-color: #ed642b;
+    background-color: #f26600;
     color: #FFFFFF;
 }
 
@@ -172,7 +172,7 @@
 }
 
 #button-submit button:hover {
-    background-color: #ed642b;
+    background-color: #f26600;
 }
 
 
