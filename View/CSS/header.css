@@ -6,7 +6,7 @@
 }
 
 .nav-bar .active {
-    background-color: #ed642b;
+    background-color: #f26600;
 }
 
 .nav-bar a{
@@ -28,7 +28,7 @@
 }
 
 .nav-button:hover {
-    background-color: #ed5340;
+    background-color: #f26600;
 }
 
 .nav-button span {
@@ -72,7 +72,7 @@
 }
 
 .header-bar .power-button {
-    background-color: #ed642b;
+    background-color: #f26600;
     float: right;
     flex-basis: 0;
     flex-grow: 1;

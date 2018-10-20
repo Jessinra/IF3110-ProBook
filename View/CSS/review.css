@@ -150,12 +150,12 @@
 
 #button-back button {
     background-color: #ffffff;
-    color: #ed642b;
-    border: #ed642b solid 1px;
+    color: #d9534f;
+    border: #d9534f solid 1px;
 }
 
 #button-back button:hover {
-    background-color: #ed642b;
+    background-color: #d9534f;
     color: #FFFFFF;
 }
 
@@ -170,7 +170,7 @@
 }
 
 #button-submit button:hover {
-    background-color: #ed642b;
+    background-color: #f26600;
 }
 
 
