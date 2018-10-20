@@ -92,7 +92,7 @@ Pada bagian bawah halaman, terdapat tombol Back dan Save. Jika tombol Back ditek
 
 ### History
 
-![](mocks/history.png)
+![](mocks/done/history.png)
 
 Pada halaman ini, ditampilkan daftar buku yang sudah pernah dipesan oleh pengguna, diurutkan berdasarkan waktu pemesanan dengan pesanan paling baru merupakan entri paling atas.
 

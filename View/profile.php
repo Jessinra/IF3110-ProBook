@@ -23,11 +23,9 @@
             </button>
         </div>
         <div class="profile picture center">
-            <!-- Image -->
             <img src="../View/Src/profile/sample/Jollybee-Logo.png"/>
         </div>
         <div class="profile name center">
-            <!-- Name -->
             Loli Bee
         </div>
     </div>
@@ -88,4 +86,13 @@
     </div>
 </div>
 </body>
+
+
+<script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
+<script type="text/javascript" src="../View/JS/switch_pages.js"></script>
+<script>
+    window.onload = function () {
+        switch_to_profile();
+    };
+</script>
 </html>

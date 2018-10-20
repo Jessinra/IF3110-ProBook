@@ -1,0 +1,179 @@
+.review-content {
+    width: 90%;
+    margin: 10% 5% 13% 5%;
+    flex-flow: column;
+    font-family: "Linotte", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.review-book-detail {
+    color: white;
+    flex-grow: 7;
+    flex-basis: 0;
+}
+
+.review-book-detail h1 {
+    margin: 0;
+}
+
+.review-book-detail span {
+    font-size: 120%;
+}
+
+.review-thumbnail {
+    flex-grow: 2;
+    flex-basis: 0;
+    margin: 2% 4% 5% 3%;
+}
+
+.review-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ratings, .comment {
+
+    background-color: RGBA(255, 255, 255, 0.3);
+    flex-flow: column;
+}
+
+.ratings {
+    padding: 10% 0 0 0;
+}
+
+.ratings h2, .comment h2 {
+    color: white;
+    /*THE REAL COLOR SHOULD BE:*/
+    /*color: #00374c;*/
+    font-size: 240%;
+    margin: 0;
+}
+
+/*Rating Section*/
+
+.star-ratings {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    color: #feef39;
+    font-size: 400%;
+
+    display: flex;
+    /*flex-grow: 1;*/
+
+    cursor: default;
+}
+
+.star-ratings > .placeholder {
+    flex-basis: 0;
+    flex-grow: 4;
+}
+
+.star-ratings > .content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.star-ratings span {
+    display: inline-block;
+    position: relative;
+    width: 6%;
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.star-ratings span:hover:before,
+.star-ratings span:hover ~ span:before {
+    content: "★";
+    position: absolute;
+}
+
+.star-ratings span:hover:after,
+.star-ratings span:hover:after ~ span:hover {
+    content: "☆";
+    position: absolute;
+}
+
+.star-ratings span:hover {
+    color: #edd234;
+    transition: transform 0.2s;
+    transform: scale(1.3);
+}
+
+.comment {
+    padding: 3% 0 0 0;
+}
+
+#book-comment {
+
+    margin-top: 5%;
+    padding: 2%;
+    min-height: 7em;
+    max-height: 100%;
+    overflow-y: scroll;
+    resize: none;
+
+    color: #000000;
+    font-family: "Arial", sans-serif;
+    text-transform: capitalize;
+
+    background-color: #ededed;
+    border: #00374C solid 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#book-comment::placeholder {
+    text-align: center;
+    padding-top: 3em;
+}
+
+#book-comment:focus {
+    outline: none;
+}
+
+.comment button {
+    border-radius: 5px;
+    width: 4.5em;
+    height: 1.5em;
+    margin: 15% 0 3% 0;
+    font-size: 150%;
+}
+
+.comment button:focus {
+    outline: none;
+}
+
+.comment a {
+    flex: 1 0 0;
+}
+
+#button-back button {
+    background-color: #ffffff;
+    color: #ed642b;
+    border: #ed642b solid 1px;
+}
+
+#button-back button:hover {
+    background-color: #ed642b;
+    color: #FFFFFF;
+}
+
+#button-submit {
+    text-align: right;
+}
+
+#button-submit button {
+    border: 0;
+    background-color: #0dc6f1;
+    color: #FFFFFF;
+}
+
+#button-submit button:hover {
+    background-color: #ed642b;
+}
+
+
+

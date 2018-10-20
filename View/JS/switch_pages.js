@@ -1,6 +1,5 @@
 function switch_to_page(page) {
     var nav_bar = document.getElementsByClassName("nav-button");
-    console.log(nav_bar.length);
 
     for (var i = 0; i < nav_bar.length; i++) {
         nav_bar[i].classList.remove("active");

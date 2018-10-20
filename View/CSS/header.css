@@ -42,6 +42,8 @@
 
 .header-bar .title {
     padding-left: 3%;
+    flex-basis: 0;
+    flex-grow: 4;
 }
 
 .header-bar .title .title-highlight {
@@ -51,6 +53,8 @@
 .header-bar .username {
     float: right;
     padding-right: 3%;
+    flex-basis: 0;
+    flex-grow: 4;
 }
 
 .header-bar .username a {
@@ -70,15 +74,17 @@
 .header-bar .power-button {
     background-color: #ed642b;
     float: right;
-    width: auto;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 .header-bar .power-button img {
     padding: 0 15% 0 15%;
     margin: 5%;
-    max-height: 90%;
+    /*max-width: none;*/
+    /*max-height: 90%;*/
     object-fit: contain;
-    overflow: auto
+    overflow: auto;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */

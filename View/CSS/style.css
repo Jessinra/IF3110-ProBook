@@ -7,6 +7,12 @@ html {
     background: url("../Src/background/64633879_p0.jpg") fixed;
     background-size: 1640px 922px;
     padding-top:100px;
+    overflow-y: scroll;
+
+}
+::-webkit-scrollbar {
+    width: 0;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 @media screen and (max-width: 600px) {
@@ -81,6 +87,21 @@ h1 {
     display: flex;
 }
 
+.flex-column{
+    flex-flow: column;
+}
+
+.flex-row{
+    flex-flow: row;
+}
+
+
 .resp-element{
     padding:0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
