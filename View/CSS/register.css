@@ -3,27 +3,6 @@
     src: url("fonts/Bebas Neue/BebasNeue-Regular.ttf");
 }
 
-@media screen and (max-width: 1050px) {
-    html {
-        min-width: 900px;
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 1050px) and (max-width: 1200px) {
-    html {
-        width: 95%;
-        padding: 0 2.5%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    html {
-        width: 90%;
-        padding: 0 5%;
-    }
-}
-
 body {
     background-color: #ffffff;
 }
@@ -80,7 +59,7 @@ tr th label {
 .form {
     background-color: #00AEEF;
     position: relative;
-    width: 20%;
+    width: 18%;
     height: 16%;
     border: 6px solid #00AEEF;
     border-radius: 5px;
