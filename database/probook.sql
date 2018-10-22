@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2018 at 09:10 AM
+-- Generation Time: Oct 22, 2018 at 02:37 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.1.18
 
@@ -39,12 +39,26 @@ CREATE TABLE `books` (
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `popularities`
+-- (See below for the actual view)
+--
+CREATE TABLE `popularities` (
+`book_id` int(11)
+,`rating` decimal(14,4)
+,`total` bigint(21)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `reviews`
 --
 
 CREATE TABLE `reviews` (
   `id` int(11) NOT NULL,
   `transaction_id` int(11) NOT NULL,
+  `book_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `rating` int(1) NOT NULL,
   `comment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -79,6 +93,15 @@ CREATE TABLE `users` (
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Structure for view `popularities`
+--
+DROP TABLE IF EXISTS `popularities`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `popularities`  AS  select `books`.`id` AS `book_id`,avg(`reviews`.`rating`) AS `rating`,count(`reviews`.`rating`) AS `total` from (`books` left join `reviews` on((`books`.`id` = `reviews`.`book_id`))) group by `books`.`id` ;
+
 --
 -- Indexes for dumped tables
 --
@@ -94,7 +117,8 @@ ALTER TABLE `books`
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`id`),
+  ADD KEY `book_id` (`book_id`),
+  ADD KEY `user_id` (`user_id`),
   ADD KEY `transaction_id` (`transaction_id`);
 
 --
@@ -136,7 +160,9 @@ ALTER TABLE `users`
 -- Constraints for table `reviews`
 --
 ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `reviews_ibfk_3` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transactions`
