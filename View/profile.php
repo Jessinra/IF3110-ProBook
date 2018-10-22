@@ -8,83 +8,95 @@
     <link rel="stylesheet" href="../View/CSS/style.css">
     <link rel="stylesheet" href="../View/CSS/profile.css">
 </head>
+
+<?php
+    $query_result = NULL;
+
+    $query_entry = array(
+        "profilepic" => "../View/Src/profile/sample/profile_pict.png",
+        "profilename" => "Loli Bee",
+        "username" => "legalloli",
+        "email" => "loli@gmail.com",
+        "address" => "Jl. Ganesha No. 10",
+        "phonenumber" => "08123456789"
+    );
+
+    $query_result = $query_entry;
+?>
+
 <body>
-<div class="header">
-    <?php
-    include("../View/header.html");
-    include("../View/nav-bar.html");
-    ?>
-</div>
-<div class="profile">
-    <div class="profile home">
-        <div class="profile edit-button">
-            <button>
-                <img src="../View/Src/profile/icon/edit.png"/>
-            </button>
+    <div class="header">
+        <?php
+        include("../View/header.html");
+        include("../View/nav-bar.html");
+        ?>
+    </div>
+    <div class="profile">
+        <div class="profile home">
+            <div class="profile edit-button">
+                <a href="profile-edit.php">
+                    <img src="../img/edit.png"/>
+                </a>
+            </div>
+            <div class="profile picture center">
+                <img src=<?php echo "\"".$query_result["profilepic"]."\"" ?>/>
+            </div>
+            <div class="profile name center">
+                <?php echo $query_result["profilename"]?>
+            </div>
         </div>
-        <div class="profile picture center">
-            <img src="../View/Src/profile/sample/profile_pict.png"/>
-        </div>
-        <div class="profile name center">
-            Loli Bee
+        <div class="profile details">
+            <div class="profile-title">
+                <h1>My Profile</h1>
+            </div>
+            <table>
+                <tr class="field" id="profile-username">
+                    <td class="icon-container">
+                        <img class="icon" src="../View/Src/profile/icon/user.png"/>
+                    </td>
+                    <td class="label">
+                        Username
+                    </td>
+                    <td class="content" id="username">
+                        @<?php echo $query_result["username"]?>
+                    </td>
+                </tr>
+                <tr class="field" id="profile-email">
+                    <td class="icon-container">
+                     <img class="icon" src="../View/Src/profile/icon/email.png"/>
+                    </td>
+                    <td class="label">
+                        Email
+                    </td>
+                    <td class="content" id="email">
+                        <?php echo $query_result["email"]?>
+                    </td>
+                </tr>
+                <tr class="field" id="profile-address">
+                    <td class="icon-container">
+                        <img class="icon" src="../View/Src/profile/icon/address.png"/>
+                    </td>
+                    <td class="label">
+                        Address
+                    </td>
+                    <td class="content" id="address">
+                        <?php echo $query_result["address"]?>
+                    </td>
+                </tr>
+                <tr class="field" id="profile-phone-number">
+                    <td class="icon-container">
+                        <img class="icon" src="../View/Src/profile/icon/phone.png"/>
+                    </td>
+                    <td class="label">
+                        Phone Number
+                    </td>
+                    <td class="content" id="phone-number">
+                        <?php echo $query_result["phonenumber"]?>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div class="profile details">
-        <div class="profile-title">
-            <h1>My Profile</h1>
-        </div>
-        <table>
-            <tr class="field" id="profile-username">
-                <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/icon/user.png"/>
-                </td>
-                <td class="label">
-                    Username
-                </td>
-                <td class="content" id="username">
-                    <!-- UserName -->
-                    @legalloli
-                </td>
-            </tr>
-            <tr class="field" id="profile-email">
-                <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/icon/email.png"/>
-                </td>
-                <td class="label">
-                    Email
-                </td>
-                <td class="content" id="email">
-                    <!-- Email -->
-                    loli@gmail.com
-                </td>
-            </tr>
-            <tr class="field" id="profile-address">
-                <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/icon/address.png"/>
-                </td>
-                <td class="label">
-                    Address
-                </td>
-                <td class="content" id="address">
-                    <!-- Address -->
-                    Jl. Ganesha No. 10
-                </td>
-            </tr>
-            <tr class="field" id="profile-phone-number">
-                <td class="icon-container">
-                    <img class="icon" src="../View/Src/profile/icon/phone.png"/>
-                </td>
-                <td class="label">
-                    Phone Number
-                </td>
-                <td class="content" id="phone-number">
-                    <!-- Phone Number -->
-                    08123456789
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
 </body>
 
 
