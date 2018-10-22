@@ -91,11 +91,13 @@ $book_reviews[1] = array(
                 </datalist>
             </div>
             <div class="order-submit">
-                <button type="submit">Order</button>
+                <button type="button" onclick=submit_order()>Order</button>
             </div>
 
         </form>
     </div>
+
+    <div id="order_success"></div>
 
 
     <div class="flex-container flex-column book-review">
@@ -133,11 +135,30 @@ $book_reviews[1] = array(
 <script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
 <script type="text/javascript" src="../View/JS/star-rating.js"></script>
+<script type="text/javascript" src="../View/JS/ajax.js"></script>
 <script>
     window.onload = function () {
         switch_to_browse();
         display_star_rating(<?php echo $book_details['ratings']?>);
     };
 </script>
+
+<script>
+    function show_response(responseText) {
+        document.getElementById("order_success").textContent = responseText;
+    }
+
+    function submit_order() {
+
+        var order_qty = document.getElementsByName("order-quantity")[0];
+        order_qty = order_qty.value;
+
+        var url = "../Controller/temp_ajax_post.php";
+        var payload = {"order-quantity": order_qty};
+
+        postAjax(url, payload, show_response);
+    }
+</script>
+
 
 </html>
