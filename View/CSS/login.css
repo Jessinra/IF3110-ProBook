@@ -40,15 +40,15 @@ tr th {
 }
 
 tr th.table_header {
-    font-size: 1vw;
-    width: 45%;
+    font-size: 1.2vw;
+    width: 39%;
     text-align: right;
 }
 
 .form {
     background-color: #00AEEF;
     position: relative;
-    width: 24%;
+    width: 26%;
     height: 16%;
     border: 6px solid #00AEEF;
     border-radius: 5px;
@@ -78,9 +78,10 @@ tr th.table_header {
 }
 
 #move {
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     padding-left: 5%;
     padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 #submit {
@@ -92,7 +93,7 @@ tr th.table_header {
     font-family: "BebasNeue", sans-serif;
     font-size: 1.5vw;
     margin-left: 40%;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 3%;
     padding: 1% 0;
     color: #f26600;

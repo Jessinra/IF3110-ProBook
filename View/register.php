@@ -88,7 +88,7 @@
             <br>
             <label id="move"><a href="login.php">Already have an account?</a></label>
             <br>
-            <button type="submit" id="submit" name="login">
+            <button type="submit" id="submit" name="register">
                 R E G I S T E R
             </button>
         </form>

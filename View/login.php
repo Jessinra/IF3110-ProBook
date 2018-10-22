@@ -4,6 +4,7 @@
 <head>
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/login.css">
+    <script type="text/javascript" src="JS/validate.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,6 @@
                     </th>
                 </tr>
             </table>
-            <br>
             <label id="move"><a href="register.php">Don't have an account?</a></label>
             <br>
             <button type="submit" id="submit" name="login">
