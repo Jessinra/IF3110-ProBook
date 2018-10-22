@@ -4,7 +4,7 @@
 <head>
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/login.css">
-    <script type="text/javascript" src="JS/validate.js"></script>
+    <script type="text/javascript" src="JS/validate_login.js"></script>
 </head>
 
 <body>

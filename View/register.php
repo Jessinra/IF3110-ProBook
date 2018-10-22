@@ -32,7 +32,7 @@
                                placeholder="">
                     </div>
                     <div class="unique-checker">
-                        <img src="../View/Src/register/v.png"/>
+                        <img id="first" /*src="../View/Src/register/v.png"*/ />
                     </div>
                 </div>
                 <div class="flex-container">
@@ -44,7 +44,7 @@
                                onkeyup="checkEmail(this.value)" placeholder="">
                     </div>
                     <div class="unique-checker">
-                        <img src="../View/Src/register/x.png">
+                        <img id="second" /*src="../View/Src/register/x.png"*/ />
                     </div>
                 </div>
                 <div class="flex-container">
@@ -94,4 +94,6 @@
     </div>
 </div>
 </body>
+
+<script type="text/javascript" src="JS/validate_register.js"></script>
 </html>
