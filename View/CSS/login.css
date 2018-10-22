@@ -5,13 +5,14 @@
 
 body {
     background-color: #ffffff;
+    background-size: 100%;
 }
 
 h1 {
     color: #000000;
     font-family: "BebasNeue", sans-serif;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
 
     margin: 3%;
     /*dont delete these 2 below, show warning but it's fine*/
@@ -30,8 +31,8 @@ label {
 }
 
 table {
-    margin-left: 2%;
-    border-spacing: 10px 1em;
+    margin-left: 1%;
+    border-spacing: 12px 0.4em;
 }
 
 tr th {
@@ -40,15 +41,16 @@ tr th {
 }
 
 tr th.table_header {
-    font-size: 1vw;
-    width: 45%;
+    font-size: 1.1vw;
+    width: 39%;
     text-align: right;
+    letter-spacing: 1px;
 }
 
 .form {
     background-color: #00AEEF;
     position: relative;
-    width: 24%;
+    width: 26%;
     height: 16%;
     border: 6px solid #00AEEF;
     border-radius: 5px;
@@ -78,9 +80,10 @@ tr th.table_header {
 }
 
 #move {
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     padding-left: 5%;
     padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 #submit {
@@ -92,7 +95,7 @@ tr th.table_header {
     font-family: "BebasNeue", sans-serif;
     font-size: 1.5vw;
     margin-left: 40%;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 3%;
     padding: 1% 0;
     color: #f26600;

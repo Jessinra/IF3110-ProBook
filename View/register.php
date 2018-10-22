@@ -4,7 +4,6 @@
 <head>
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
-    <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
 </head>
 
 <body>
@@ -33,7 +32,7 @@
                                placeholder="">
                     </div>
                     <div class="unique-checker">
-                        <img src="../View/Src/register/v.png"/>
+                        <img id="first" /*src="../View/Src/register/v.png"*/ />
                     </div>
                 </div>
                 <div class="flex-container">
@@ -45,7 +44,7 @@
                                onkeyup="checkEmail(this.value)" placeholder="">
                     </div>
                     <div class="unique-checker">
-                        <img src="../View/Src/register/x.png">
+                        <img id="second" /*src="../View/Src/register/x.png"*/ />
                     </div>
                 </div>
                 <div class="flex-container">
@@ -88,11 +87,13 @@
             <br>
             <label id="move"><a href="login.php">Already have an account?</a></label>
             <br>
-            <button type="submit" id="submit" name="login">
+            <button type="submit" id="submit" name="register">
                 R E G I S T E R
             </button>
         </form>
     </div>
 </div>
 </body>
+
+<script type="text/javascript" src="JS/validate_register.js"></script>
 </html>
