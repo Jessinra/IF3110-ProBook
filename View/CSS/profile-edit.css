@@ -1,0 +1,150 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div img{
+    width: 100%;
+    height: auto;
+    /* flex-basis: 0; */
+    padding: 0;
+    margin: 0;
+}
+
+.image-container{
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+}
+
+.form-label{
+    flex-basis: 0;
+    /* width: 40%; */
+    height: auto;
+    flex-grow: 30;
+}
+
+.form-field{
+    flex-basis: 0;
+    /* align-items: left; */
+    /* width: 56%; */
+    height: auto;
+    flex-grow: 66;
+}
+
+.form-space{
+    flex-basis: 0;
+    flex-grow: 4;
+    /* width: 4%; */
+}
+
+.special-field{
+    flex-basis: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.field{ 
+    width : 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.field.image-field{
+    margin-bottom: 30px;
+}
+
+.content{
+    margin: 0% 3%;
+}
+
+.input-field{
+    width : 98.5%;
+}
+
+textarea{
+    width : 97.8%;
+}
+
+#file-upload-interface{
+    margin-top: 10px;
+}
+
+#file-upload-label-container{
+    flex-basis: 0;
+    flex-grow: 75;
+}
+
+#file-upload-button-container{
+    flex-basis: 0;
+    flex-grow: 25;
+}
+
+#file-upload-label{
+    width: 95%;
+}
+
+button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 100%;
+    height: auto;
+}
+
+#file-upload-button{
+    background-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #b3b3b3;
+    border-radius: 7px / 3px;
+}
+
+.change-button-container{
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+#back-button-container{
+    width: 25%;
+    display: inline-block;
+    float: left;
+}
+
+#save-button-container{
+    width: 25%;
+    display: inline-block;
+    float: right;
+}
+
+#back-button{
+    background-color: white;
+    color: #d9534f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9534f;
+    border-radius: 5px;
+}
+
+#back-button:hover{
+    background-color: #d9534f;
+    color: white;
+}
+
+#save-button{
+    background-color: #0094cc;
+    color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0094cc;
+    border-radius: 5px;
+}
+
+#save-button:hover{
+    background-color: white;
+    color: #0094cc;
+}
