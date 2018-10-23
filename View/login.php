@@ -4,7 +4,7 @@
 <head>
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/login_admin.css">
+    <link rel="stylesheet" type="text/css" href="CSS/login.css">
     <script type="text/javascript" src="JS/validate_login.js"></script>
 </head>
 
@@ -35,7 +35,7 @@
             </div>
             <div class="create-account-container">
                 <label id="move">
-                    <a href="../View/register_admin.php">Don't have an account?</a>
+                    <a href="../View/register.php">Don't have an account?</a>
                 </label>
             </div>
             <div>

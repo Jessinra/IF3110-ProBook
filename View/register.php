@@ -4,7 +4,7 @@
 <head>
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/register_admin.css">
+    <link rel="stylesheet" type="text/css" href="CSS/register.css">
 
 </head>
 
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div>
-                <label id="move"><a href="../View/login_admin.php">Already have an account?</a></label>
+                <label id="move"><a href="../View/login.php">Already have an account?</a></label>
             </div>
 
             <div>

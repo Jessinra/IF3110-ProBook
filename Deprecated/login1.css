@@ -1,49 +1,11 @@
 @font-face {
     font-family: "BebasNeue";
-    src: url("fonts/Bebas Neue/BebasNeue-Regular.ttf");
+    src: url("../View/CSS/fonts/Bebas Neue/BebasNeue-Regular.ttf");
 }
 
-@media screen and (max-width: 600px) {
-    html {
-        min-width: 270px;
-        width: 54%;
-        padding: 10% 23%;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 750px) {
-    html {
-        width: 44%;
-        padding: 10% 28%;
-    }
-}
-
-@media screen and (min-width: 750px) and (max-width: 900px) {
-    html {
-        width: 36%;
-        padding: 10% 32%;
-    }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1050px) {
-    html {
-        width: 31%;
-        padding: 10% 34.5%;
-    }
-}
-
-@media screen and (min-width: 1050px) and (max-width: 1200px) {
-    html {
-        width: 27.5%;
-        padding: 10% 36.25%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    html {
-        width: 27.5%;
-        padding: 10% 36.25%;
-    }
+body {
+    background-color: #ffffff;
+    background-size: 100%;
 }
 
 h1 {
@@ -53,6 +15,9 @@ h1 {
     font-size: 3.5vw;
 
     margin: 3%;
+    /*dont delete these 2 below, show warning but it's fine*/
+    /*margin-block-start: 3%;*/
+    /*margin-block-end: 3%;*/
 }
 
 input[type=text], input[type=password] {
@@ -65,9 +30,28 @@ label {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+table {
+    margin-left: 1%;
+    border-spacing: 12px 0.4em;
+}
+
+tr th {
+    text-align: left;
+    font-weight: normal;
+}
+
+tr th.table_header {
+    font-size: 1.1vw;
+    width: 39%;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
 .form {
     background-color: #00AEEF;
     position: relative;
+    width: 26%;
+    height: 16%;
     border: 6px solid #00AEEF;
     border-radius: 5px;
     margin: 5% auto 0 auto;
@@ -89,37 +73,10 @@ label {
 .title {
     margin: 0 auto;
     display: flex;
-
 }
 
 #middle {
     width: 100%;
-    letter-spacing: 8px;
-}
-
-.login-container {
-    flex-flow: column;
-    letter-spacing: 2px;
-}
-
-.login-container .flex-container {
-    padding-bottom: 1.5%;
-}
-
-.form-label {
-    flex-grow: 1;
-    flex-basis: 0;
-    padding-left: 13%;
-}
-
-.form-entry {
-    flex-grow: 2;
-    flex-basis: 0;
-    padding-right: 15%;
-}
-
-.form-entry input {
-    padding: 1%;
 }
 
 #move {
@@ -129,28 +86,19 @@ label {
     padding-bottom: 20px;
 }
 
-.create-account-container {
-    padding: 5% 0 0 0;
-}
-
 #submit {
     background-color: #ffffff;
-    width: 22%;
+    width: 20%;
     height: 70%;
     border: 1px solid #f26600;
     border-radius: 7px;
     font-family: "BebasNeue", sans-serif;
     font-size: 1.5vw;
-    margin-left: 39%;
+    margin-left: 40%;
     margin-top: 2%;
     margin-bottom: 3%;
     padding: 1% 0;
     color: #f26600;
-}
-
-#submit span {
-    letter-spacing: 7px;
-    margin-right: -7px;
 }
 
 #submit:hover {
