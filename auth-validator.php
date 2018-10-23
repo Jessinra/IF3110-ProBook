@@ -17,7 +17,7 @@
         }
         else{
             $userid = $_COOKIE['ID'];
-            $query_string = "SELECT `id` FROM `active_users` WHERE `id`='$userid'";"
+            $query_string = "SELECT `id` FROM `active_users` WHERE `id`='$userid'";
             $query_result = $mysqli->query($query_string);
             if(empty($query_result)){
                 header('Location: login.php');
