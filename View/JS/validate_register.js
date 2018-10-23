@@ -112,7 +112,7 @@ function validateCoPass() {
 	}
 	else {
 		document.getElementById(inName).style.borderColor="red";
-		document.getElementById(inName).style.borderWidth="red";
+		document.getElementById(inName).style.borderWidth="2px";
 		if (document.getElementById(inName).placeholder!="Password not match!") {
 			document.getElementById(inName).placeholder="Enter your password again!";
 		}		
