@@ -104,7 +104,7 @@ function validateCoPass() {
 			return true;
 		} else {
 			document.getElementById(inName).style.borderColor="red";
-			document.getElementById(inName).style.borderWidth="medium";
+			document.getElementById(inName).style.borderWidth="2px";
 			document.getElementById(inName).placeholder="Password not match!";
 			document.getElementById(inName).value="";
 			return false;
@@ -112,7 +112,7 @@ function validateCoPass() {
 	}
 	else {
 		document.getElementById(inName).style.borderColor="red";
-		document.getElementById(inName).style.borderWidth="medium";
+		document.getElementById(inName).style.borderWidth="2px";
 		if (document.getElementById(inName).placeholder!="Password not match!") {
 			document.getElementById(inName).placeholder="Enter your password again!";
 		}		
@@ -132,13 +132,13 @@ function validatePhoneNumber() {
 			document.getElementById(inName).placeholder="Incorrect phone number format!";
 			document.getElementById(inName).value="";
 			document.getElementById(inName).style.borderColor="red";
-			document.getElementById(inName).style.borderWidth="medium";
+			document.getElementById(inName).style.borderWidth="2px";
 			return false;
 		}
 	}
 	else {
 		document.getElementById(inName).style.borderColor="red";
-		document.getElementById(inName).style.borderWidth="medium";
+		document.getElementById(inName).style.borderWidth="2px";
 		if (document.getElementById(inName).placeholder!="Incorrect phone number format!") {
 			document.getElementById(inName).placeholder="Enter your phone number!";
 		}	

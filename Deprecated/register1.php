@@ -3,9 +3,7 @@
 
 <head>
     <title>Pro-Book</title>
-    <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/register_admin.css">
-
+    <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
 </head>
 
 <body>
@@ -86,17 +84,12 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <label id="move"><a href="../View/login_admin.php">Already have an account?</a></label>
-            </div>
-
-            <div>
-                <a href="../View/search.php">
-                    <button type="submit" id="submit" name="register">
-                        <span>REGISTER</span>
-                    </button>
-                </a>
-            </div>
+            <br>
+            <label id="move"><a href="login.php">Already have an account?</a></label>
+            <br>
+            <button type="submit" id="submit" name="register">
+                R E G I S T E R
+            </button>
         </form>
     </div>
 </div>
