@@ -4,4 +4,4 @@
 $payload = json_decode($_POST['payload'], true);
 
 //Do something with the payload
-echo "Thankyou for your order, " . $payload["order-quantity"] . " book(s) has been submitted!";
+echo rand(1, 200);
