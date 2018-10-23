@@ -25,7 +25,7 @@
 <body>
     <div class="header">
         <?php
-        include("../View/header.html");
+        include("../View/header.php");
         include("../View/nav-bar.html");
         ?>
     </div>

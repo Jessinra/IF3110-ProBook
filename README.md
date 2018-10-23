@@ -69,7 +69,7 @@ Pada halaman ini, ditampilkan detail buku yang terdiri dari judul, penulis, gamb
 
 Pada halaman ini juga disediakan dropdown untuk memasukkan jumlah buku yang ingin dipesan dan tombol order. Jika tombol order ditekan, proses pemesanan akan dilakukan **menggunakan AJAX**, yang berarti halaman tidak akan di-*refresh* setelah tombol order ditekan. Tidak ada proses pembayaran yang ditangani oleh sistem.
 
-![](mocks/notification.png)
+![](mocks/done/notification.png)
 
 Setelah proses pemesanan selesai dilakukan, akan muncul notifikasi pada browser pengguna. **Jangan menampilkan notifikasi setelah tombol order ditekan, tetapi setelah mendapat response dari AJAX**. Informasi yang diberikan oleh notifikasi mengikuti contoh.
 

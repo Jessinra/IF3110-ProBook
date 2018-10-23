@@ -4,7 +4,8 @@
 <head>
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/register.css">
+    <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
+    <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
 
 </head>
 

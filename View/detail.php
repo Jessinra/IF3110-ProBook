@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../View/CSS/header.css">
     <link rel="stylesheet" href="../View/CSS/style.css">
     <link rel="stylesheet" href="../View/CSS/detail.css">
+    <link rel="stylesheet" href="../View/CSS/booking_modal.css">
 </head>
 <body>
 
 <div class="header">
     <?php
-    include("../View/header.html");
+    include("../View/header.php");
     include("../View/nav-bar.html");
     ?>
 </div>
@@ -125,10 +126,12 @@ $book_reviews[1] = array(
             </div>
         <?php } ?>
     </div>
-
-
 </div>
 
+
+<?php
+    include("../View/booking_modal.php");
+?>
 
 </body>
 
@@ -136,6 +139,7 @@ $book_reviews[1] = array(
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
 <script type="text/javascript" src="../View/JS/star-rating.js"></script>
 <script type="text/javascript" src="../View/JS/ajax.js"></script>
+<script type="text/javascript" src="../View/JS/modal.js"></script>
 <script>
     window.onload = function () {
         switch_to_browse();
@@ -145,7 +149,8 @@ $book_reviews[1] = array(
 
 <script>
     function show_response(responseText) {
-        document.getElementById("order_success").textContent = responseText;
+        open_modal("#booking-modal");
+        document.querySelector("#modal-nomor-transaksi").textContent = responseText;
     }
 
     function submit_order() {
@@ -153,7 +158,7 @@ $book_reviews[1] = array(
         var order_qty = document.getElementsByName("order-quantity")[0];
         order_qty = order_qty.value;
 
-        var url = "../Controller/temp_ajax_post.php";
+        var url = "../Controller/temp_book_order.php";
         var payload = {"order-quantity": order_qty};
 
         postAjax(url, payload, show_response);
