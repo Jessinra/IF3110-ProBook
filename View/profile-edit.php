@@ -9,19 +9,6 @@
     <link rel="stylesheet" href="../View/CSS/profile-edit.css">
 </head>
 
-<?php
-    $query_result = NULL;
-
-    $query_entry = array(
-        "profilepic" => "../View/Src/profile/sample/profile_pict.png",
-        "profilename" => "Loli Bee",
-        "address" => "Jl. Ganesha No. 10",
-        "phonenumber" => "08123456789"
-    );
-
-    $query_result = $query_entry;
-?>
-
 <body>
     <div class="header">
         <?php
@@ -38,7 +25,7 @@
             <div class="flex-container flex-column">
                 <div class="flex-container field image-field">
                     <div class="form-label image-container">
-                        <img src=<?php echo "\"".$query_result["profilepic"]."\""?>/>
+                        <img src=<?php echo "\"".$query_result_profile_edit["img"]."\""?>/>
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
@@ -62,7 +49,7 @@
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
-                        <input class="input-field" id="profilename" type="text" name="profilename" value=<?php echo "\"".$query_result["profilename"]."\"" ?> onclick=this.select()>
+                        <input class="input-field" id="profilename" type="text" name="profilename" value=<?php echo "\"".$query_result_profile_edit["name"]."\"" ?> onclick=this.select()>
                     </div>
                 </div>
                 <div class="flex-container field">
@@ -71,7 +58,7 @@
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
-                        <textarea onclick=this.select()><?php echo $query_result["address"] ?></textarea>
+                        <textarea onclick=this.select()><?php echo $query_result_profile_edit["address"] ?></textarea>
                     </div>
                 </div>
                 <div class="flex-container field">
@@ -80,7 +67,7 @@
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
-                        <input class="input-field" id="phonenumber" type="text" name="phonenumber" value=<?php echo "\"".$query_result["phonenumber"]."\"" ?> onclick=this.select()>
+                        <input class="input-field" id="phonenumber" type="text" name="phonenumber" value=<?php echo "\"".$query_result_profile_edit["phone_number"]."\"" ?> onclick=this.select()>
                     </div>
                 </div>
                 <div class="change-button-container">
