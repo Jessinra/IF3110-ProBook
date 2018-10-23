@@ -35,7 +35,7 @@
             </div>
             <div class="create-account-container">
                 <label id="move">
-                    <a href="../View/register.php">Don't have an account?</a>
+                    <a href="../App/register.php">Don't have an account?</a>
                 </label>
             </div>
             <div>
