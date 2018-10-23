@@ -35,7 +35,7 @@
         <div class="profile home">
             <div class="profile edit-button">
                 <a href="profile-edit.php">
-                    <img src="../img/edit.png"/>
+                    <img src="../View/Src/profile/icon/edit.png"/>
                 </a>
             </div>
             <div class="profile picture center">

@@ -20,7 +20,7 @@ div img{
     flex-basis: 0;
     /* width: 40%; */
     height: auto;
-    flex-grow: 30;
+    flex-grow: 26;
 }
 
 .form-field{
@@ -28,7 +28,7 @@ div img{
     /* align-items: left; */
     /* width: 56%; */
     height: auto;
-    flex-grow: 66;
+    flex-grow: 70;
 }
 
 .form-space{
@@ -47,7 +47,7 @@ div img{
 .field{ 
     width : 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .field.image-field{
@@ -64,6 +64,7 @@ div img{
 
 textarea{
     width : 97.8%;
+    height: 80px;
 }
 
 #file-upload-interface{
@@ -72,12 +73,17 @@ textarea{
 
 #file-upload-label-container{
     flex-basis: 0;
-    flex-grow: 75;
+    flex-grow: 72;
+}
+
+h1{
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
 #file-upload-button-container{
     flex-basis: 0;
-    flex-grow: 25;
+    flex-grow: 28;
 }
 
 #file-upload-label{
@@ -110,13 +116,13 @@ button{
 }
 
 #back-button-container{
-    width: 25%;
+    width: 22%;
     display: inline-block;
     float: left;
 }
 
 #save-button-container{
-    width: 25%;
+    width: 22%;
     display: inline-block;
     float: right;
 }
