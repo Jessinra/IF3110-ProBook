@@ -49,7 +49,7 @@
                                     <input id="file-upload-label" type="text" name="file-upload-label" placeholder="" readonly>
                                 </div>
                                 <div id="file-upload-button-container">
-                                    <button id="file-upload-button" type="button" onclick="browsefile()">Browse...</button>
+                                    <button id="file-upload-button" type="button" onclick="browsefile()">Browse ...</button>
                                 </div> 
                             </div>
                             <input type="file" name="file-to-upload" id="file-to-upload" onchange="updatefilelabel(this.value)" data-buttonText="Browse..." hidden/>
