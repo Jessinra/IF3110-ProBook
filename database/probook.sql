@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2018 at 02:37 PM
+-- Generation Time: Oct 23, 2018 at 08:35 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.1.18
 
@@ -33,7 +33,8 @@ CREATE TABLE `books` (
   `title` varchar(50) NOT NULL,
   `amount` int(3) NOT NULL,
   `writer` varchar(75) NOT NULL,
-  `desc` text NOT NULL
+  `desc` text NOT NULL,
+  `img` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -90,8 +91,20 @@ CREATE TABLE `users` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone_number` varchar(20) NOT NULL,
+  `img` varchar(200) DEFAULT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `name`, `email`, `phone_number`, `img`, `address`) VALUES
+(1, 'harry', 'harry', 'Harry Setiawan Hamjaya', 'harry@gmail,com', '08123456789', NULL, 'Jl satu no 1'),
+(2, 'tony', 'tony', 'Tony Tony', 'tony@gmail,com', '08234567891', NULL, 'Jl dua no 2'),
+(3, 'jessin', 'jessin', 'Jessin Donnyson', 'jessin@gmail,com', '08345678912', NULL, 'Jl tiga no 3'),
+(4, 'jeffry', 'jeffry', 'Jeffry Jeffry', 'jeffry@gmail,com', '08456789123', NULL, 'Jl empat no 4'),
+(5, 'habibi', 'habibi', 'Habibi Haidir', 'habibi@gmail,com', '08567891234', NULL, 'Jl lima no 5');
 
 -- --------------------------------------------------------
 
@@ -150,7 +163,7 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
