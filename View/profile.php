@@ -9,21 +9,6 @@
     <link rel="stylesheet" href="../View/CSS/profile.css">
 </head>
 
-<?php
-    $query_temp = NULL;
-
-    $query_entry = array(
-        "profilepic" => "../View/Src/profile/sample/profile_pict.png",
-        "profilename" => "Loli Bee",
-        "username" => "legalloli",
-        "email" => "loli@gmail.com",
-        "address" => "Jl. Ganesha No. 10",
-        "phonenumber" => "08123456789"
-    );
-
-    $query_temp = $query_entry;
-?>
-
 <body>
     <div class="header">
         <?php
@@ -39,10 +24,10 @@
                 </a>
             </div>
             <div class="profile picture center">
-                <img src=<?php echo "\"".$query_temp["profilepic"]."\"" ?>/>
+                <img src=<?php echo "\"".$query_result_profile["img"]."\"" ?>/>
             </div>
             <div class="profile name center">
-                <?php echo $query_temp["profilename"]?>
+                <?php echo $query_result_profile["name"]?>
             </div>
         </div>
         <div class="profile details">
@@ -58,7 +43,7 @@
                         Username
                     </td>
                     <td class="content" id="username">
-                        @<?php echo $query_result["username"]?>
+                        @<?php echo $query_result_profile["username"]?>
                     </td>
                 </tr>
                 <tr class="field" id="profile-email">
@@ -69,7 +54,7 @@
                         Email
                     </td>
                     <td class="content" id="email">
-                        <?php echo $query_result["email"]?>
+                        <?php echo $query_result_profile["email"]?>
                     </td>
                 </tr>
                 <tr class="field" id="profile-address">
@@ -80,7 +65,7 @@
                         Address
                     </td>
                     <td class="content" id="address">
-                        <?php echo $query_result["address"]?>
+                        <?php echo $query_result_profile["address"]?>
                     </td>
                 </tr>
                 <tr class="field" id="profile-phone-number">
@@ -91,7 +76,7 @@
                         Phone Number
                     </td>
                     <td class="content" id="phone-number">
-                        <?php echo $query_result["phonenumber"]?>
+                        <?php echo $query_result_profile["phone_number"]?>
                     </td>
                 </tr>
             </table>
