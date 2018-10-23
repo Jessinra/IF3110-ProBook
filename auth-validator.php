@@ -7,7 +7,7 @@
     if(basename($_SERVER['PHP_SELF']) == 'login.php' || basename($_SERVER['PHP_SELF']) == 'register.php'){
         if(isset($_COOKIE['ID'])){
             $userid = $_COOKIE['ID'];
-            $query_string = "SELECT `id` FROM `active_users` WHERE `id`='$userid'";
+            $query_string = "SELECT `id` FROM `active_users` WHERE `id`=$userid";
             $query_result = $mysqli->query($query_string);
             if(!empty($query_result)){
                 header('Location: search.php');
@@ -20,7 +20,7 @@
         }
         else{
             $userid = $_COOKIE['ID'];
-            $query_string = "SELECT `id` FROM `active_users` WHERE `id`='$userid'";
+            $query_string = "SELECT `id` FROM `active_users` WHERE `id`=$userid";
             $query_result = $mysqli->query($query_string);
             if(empty($query_result)){
                 header('Location: login.php');

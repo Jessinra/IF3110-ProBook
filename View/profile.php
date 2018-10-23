@@ -10,7 +10,7 @@
 </head>
 
 <?php
-    $query_result = NULL;
+    $query_temp = NULL;
 
     $query_entry = array(
         "profilepic" => "../View/Src/profile/sample/profile_pict.png",
@@ -21,7 +21,7 @@
         "phonenumber" => "08123456789"
     );
 
-    $query_result = $query_entry;
+    $query_temp = $query_entry;
 ?>
 
 <body>
@@ -39,10 +39,10 @@
                 </a>
             </div>
             <div class="profile picture center">
-                <img src=<?php echo "\"".$query_result["profilepic"]."\"" ?>/>
+                <img src=<?php echo "\"".$query_temp["profilepic"]."\"" ?>/>
             </div>
             <div class="profile name center">
-                <?php echo $query_result["profilename"]?>
+                <?php echo $query_temp["profilename"]?>
             </div>
         </div>
         <div class="profile details">

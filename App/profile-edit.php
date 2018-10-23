@@ -1,5 +1,5 @@
 <?php
-    require_once '../auth-validator.php'
+    require_once '../auth-validator.php';
     require_once '../config.php';
 
     // $userid = $_COOKIE['ID'];
