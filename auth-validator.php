@@ -1,7 +1,10 @@
 <?php
     require_once '../config.php';
     
-    if(basename(__FILE__) == 'login.php' || basename(__FILE__) == 'register.php'){
+    // echo basename($_SERVER['PHP_SELF'])."<br/>";
+    // echo basename(__FILE__);
+
+    if(basename($_SERVER['PHP_SELF']) == 'login.php' || basename($_SERVER['PHP_SELF']) == 'register.php'){
         if(isset($_COOKIE['ID'])){
             $userid = $_COOKIE['ID'];
             $query_string = "SELECT `id` FROM `active_users` WHERE `id`='$userid'";
