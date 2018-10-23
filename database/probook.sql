@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2018 at 08:35 AM
+-- Generation Time: Oct 23, 2018 at 03:38 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.1.18
 
@@ -21,6 +21,16 @@ SET time_zone = "+00:00";
 --
 -- Database: `probook`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `active_users`
+--
+
+CREATE TABLE `active_users` (
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -118,6 +128,12 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `active_users`
+--
+ALTER TABLE `active_users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `books`

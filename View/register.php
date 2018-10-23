@@ -92,11 +92,9 @@
             </div>
 
             <div>
-                <a href="../View/search.php">
-                    <button type="submit" id="submit" name="register">
-                        <span>REGISTER</span>
-                    </button>
-                </a>
+                <button type="submit" id="submit" name="register">
+                    <span>REGISTER</span>
+                </button>
             </div>
         </form>
     </div>

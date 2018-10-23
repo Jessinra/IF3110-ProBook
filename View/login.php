@@ -1,3 +1,7 @@
+<?php
+    require '../config.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +18,7 @@
         <div class="title">
             <div id="middle"><h1>LOGIN</h1></div>
         </div>
-        <form action="#" method="post" onsubmit="return validateLogin()">
+        <form action="login.php" method="post" onsubmit="return validateLogin()">
             <div class="flex-container login-container">
                 <div class="flex-container">
                     <div class="form-label">
@@ -39,11 +43,9 @@
                 </label>
             </div>
             <div>
-                <a href="../View/search.php">
-                    <button type="button" id="submit" name="login">
-                        <span>LOGIN</span>
-                    </button>
-                </a>
+                <button type="submit" id="submit" name="login">
+                    <span>LOGIN</span>
+                </button>
             </div>
         </form>
     </div>
