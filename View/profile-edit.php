@@ -25,7 +25,7 @@
             <div class="flex-container flex-column">
                 <div class="flex-container field image-field">
                     <div class="form-label image-container">
-                        <img src=<?php echo "\"".$query_result_profile_edit["img"]."\""?>/>
+                        <img id="user-image" src=<?php echo "\"".$query_result_profile_edit["img"]."\""?>/>
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
@@ -39,7 +39,7 @@
                                     <button id="file-upload-button" type="button" onclick="browsefile()">Browse ...</button>
                                 </div> 
                             </div>
-                            <input type="file" name="file-to-upload" id="file-to-upload" onchange="updatefilelabel(this.value)" data-buttonText="Browse..." hidden/>
+                            <input type="file" name="file-to-upload" id="file-to-upload" onchange="updateimagesection(this.value, this.files)" data-buttonText="Browse..." hidden/>
                         </div>
                     </div>
                 </div>
