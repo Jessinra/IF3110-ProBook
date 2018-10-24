@@ -42,8 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                onkeyup="checkUsername(this.value)"
                                placeholder="">
                     </div>
-                    <div class="unique-checker">
-                        <div id="check1" /*src="../View/Src/register/v.png"*/ /> </div>
+                    <div class="unique-checker" id="check1">
                     </div>
                 </div>
                 <div class="flex-container">
@@ -54,8 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                         <input class="fill" type="text" id="email" name="email" onclick=this.select();
                                onkeyup="checkEmail(this.value)" placeholder="">
                     </div>
-                    <div class="unique-checker">
-                        <div id="check2" /*src="../View/Src/register/x.png"*/ /> </div>
+                    <div class="unique-checker" id="check2">
                     </div>
                 </div>
                 <div class="flex-container">
@@ -109,4 +107,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </div>
 </body>
 <script type="text/javascript" src="../View/JS/validate_register.js"></script>
+<script type="text/javascript" src="../View/JS/ajax-check.js"></script>
 </html>
