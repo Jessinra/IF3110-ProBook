@@ -52,6 +52,30 @@ function addBook($mysqli, $bookDetail)
     $mysqli->query($queryString);
 }
 
+function find_book($mysqli, $query){
+
+    $query_string = "SELECT `title`, `author`, `desc`, `img` FROM `books` WHERE `title` LIKE '%$query%'";
+    $query_result = $mysqli->query($query_string);
+
+    echo $query_result->num_rows == 0;
+
+    $search_result = array();
+    $idx = 0;
+    while( $r = $query_result->fetch_array()){
+        $search_result[$idx++] = array(
+            'thumbnail' => $r['img'],
+            'title' => $r['title'],
+            'author' => $r['author'],
+            'ratings' => 4.0,
+            'max_rating' => 5.0,
+            'votes' => 10000,
+            'description' => $r['desc']
+        );
+    }
+
+    return $search_result;
+}
+
 function test_addBook(){
 
     $bookDetail = array(

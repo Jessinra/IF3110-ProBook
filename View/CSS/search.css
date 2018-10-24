@@ -75,11 +75,14 @@
     display: flex;
     flex-flow: column;
     background-color: RGBA(255, 255, 255, 0.3);
+    max-height: 200px;
+    padding-top: 3%;
 }
 
 .search-result .thumbnail {
     flex-grow: 2.5;
     margin: 1% 3% 0 2%;
+    overflow: hidden;
 }
 
 .search-result .thumbnail img {
@@ -100,7 +103,7 @@
 
 .search-result .title {
     color: #f26600;
-    font-size: 120%;
+    font-size: 180%;
     font-weight: bold;
     text-align: justify;
 }

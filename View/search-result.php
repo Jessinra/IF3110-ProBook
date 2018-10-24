@@ -19,10 +19,10 @@
 
 <div class="page-title">
     <h1 id="page-title-search">Search Result</h1>
-    <span id="search-result-found">Found <u><?php echo sizeof($query_result_search_result)?></u> result(s)</span>
+    <span id="search-result-found">Found <u><?php echo sizeof($search_result)?></u> result(s)</span>
 </div>
 
-<?php foreach ($query_result_search_result as $query_entry) { ?>
+<?php foreach ($search_result as $query_entry) { ?>
     <div class="search-result container">
         <div class="flex-container">
             <div class="search-result thumbnail">

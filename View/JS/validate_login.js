@@ -7,8 +7,8 @@ function validateLogin() {
 function validateUsername() {
 	var inName = "username";
 	if (document.getElementById(inName).value!="") {
-		document.getElementById(inName).style.borderWidth="2px";
-		document.getElementById(inName).style.borderColor="#02702c";
+		// document.getElementById(inName).style.borderWidth="2px";
+		// document.getElementById(inName).style.borderColor="#02702c";
 		return true;
 	}
 	else {
@@ -22,8 +22,8 @@ function validateUsername() {
 function validatePass() {
 	var inName = "password";
 	if (document.getElementById(inName).value!="") {
-		document.getElementById(inName).style.borderWidth="2px";
-		document.getElementById(inName).style.borderColor="#02702c";
+		// document.getElementById(inName).style.borderWidth="2px";
+		// document.getElementById(inName).style.borderColor="#02702c";
 		return true;
 	}
 	else {
