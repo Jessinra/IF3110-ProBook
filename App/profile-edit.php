@@ -7,7 +7,7 @@
         $query_result_profile_edit['img'] = 'default.jpg';
     }
 
-    $query_result_profile_edit['img'] = "../View/Src/profile/sample/" . $query_result_profile_edit['img'];
+    $query_result_profile_edit['img'] = "../View/Src/profile/picture/" . $query_result_profile_edit['img'];
 
     require_once '../View/profile-edit.php';
 ?>
