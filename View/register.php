@@ -5,7 +5,6 @@
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
     <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
-    <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
 
 </head>
 
@@ -109,6 +108,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     </div>
 </div>
 </body>
-
 <script type="text/javascript" src="../View/JS/validate_register.js"></script>
 </html>
