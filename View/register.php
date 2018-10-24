@@ -9,13 +9,22 @@
 
 </head>
 
+<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
+  if (isset($_POST['register'])) {
+    require '../App/register.php';
+  }
+}
+?>
+
 <body>
 <div class="form">
     <div class="box">
         <div class="title">
             <div id="middle"><h1>REGISTER</h1></div>
         </div>
-        <form action="#" method="post" onsubmit="return validateRegister()">
+        <form action="register.php" method="post" onsubmit="return validateRegister()">
             <div class="flex-container flex-column register-form" id="register-form">
                 <div class="flex-container">
                     <div class="form-label">
@@ -35,7 +44,7 @@
                                placeholder="">
                     </div>
                     <div class="unique-checker">
-                        <img id="first" /*src="../View/Src/register/v.png"*/ />
+                        <div id="check1" /*src="../View/Src/register/v.png"*/ /> </div>
                     </div>
                 </div>
                 <div class="flex-container">
@@ -47,7 +56,7 @@
                                onkeyup="checkEmail(this.value)" placeholder="">
                     </div>
                     <div class="unique-checker">
-                        <img id="second" /*src="../View/Src/register/x.png"*/ />
+                        <div id="check2" /*src="../View/Src/register/x.png"*/ /> </div>
                     </div>
                 </div>
                 <div class="flex-container">
