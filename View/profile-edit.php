@@ -21,7 +21,7 @@
         <div class="title">
             <h1>Edit Profile</h1>
         </div>
-        <form action="profile.php" method="post" onsubmit="return validate();">
+        <form action="profile.php" method="post" enctype="multipart/form-data" onsubmit="return validate();">
             <div class="flex-container flex-column">
                 <div class="flex-container field image-field" id="image-section">
                     <div class="form-label image-container" id="image-container">
@@ -39,7 +39,7 @@
                                     <button id="file-upload-button" type="button" onclick="browsefile()">Browse ...</button>
                                 </div> 
                             </div>
-                            <input type="file" name="img" id="file-to-upload" onchange="updateimagesection(this)" data-buttonText="Browse..." hidden/>
+                            <input type="file" name="img" id="file-to-upload" onchange="updateimagesection(this)" hidden/>
                         </div>
                     </div>
                 </div>
