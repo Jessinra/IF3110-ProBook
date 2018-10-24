@@ -82,7 +82,7 @@ label {
     background-position: 0 0, 15px 15px;
     position: relative;
     width: 99.8%;
-    height: 86%;
+    height: auto;
     border-radius: 0;
     margin: 7% 0.1% 7% 0.1%;
 }
@@ -137,7 +137,7 @@ label {
 #submit {
     background-color: #ffffff;
     width: 22%;
-    height: 70%;
+    height: auto;
     border: 1px solid #f26600;
     border-radius: 7px;
     font-family: "BebasNeue", sans-serif;
