@@ -1,12 +1,9 @@
 <?php
 
-require_once '../config.php';
+require_once '../Model/mysqli.php';
 
-$user_id = $_COOKIE['ID'];
-$username_query = $mysqli->query("SELECT username FROM users WHERE id=$user_id")->fetch_assoc();
-
-$username = $username_query['username'];
-// $username = "oio";
+$user = get_active_user($mysqli);
+$username = $user['username'];
 
 ?>
 
@@ -15,9 +12,11 @@ $username = $username_query['username'];
         <span class="title-highlight">Pro </span> -Book
     </div>
     <div class="header-bar username">
-        <a href="../App/profile.php">Hi, <?php echo $username?></a>
+        <a href="../App/profile.php">Hi, <?php echo $username ?></a>
     </div>
     <div class="header-bar power-button">
-        <img alt="power-button" src="../View/Src/header/power-button.png" id="img-button-power">
+        <a href="../App/logout.php">
+            <img alt="power-button" src="../View/Src/header/power-button.png" id="img-button-power">
+        </a>
     </div>
 </div>

@@ -1,3 +1,3 @@
 <?php
 
-include "../View/register.php";
+require_once "../View/register.php";

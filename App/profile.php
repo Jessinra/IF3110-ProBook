@@ -1,10 +1,8 @@
 <?php 
-    require_once '../auth-validator.php';
-    require_once '../config.php';
+    require_once '../App/auth-validator.php';
 
-    $user_id = $_COOKIE["ID"];
-    $query_string_profile = "SELECT `username`, `name`, `email`, `address`, `phone_number`, `img` FROM `users` WHERE `id` = $user_id;";
-    $query_result_profile = $mysqli->query($query_string_profile)->fetch_assoc();
+    $query_result_profile = get_active_user($mysqli);
+
 
     if($query_result_profile['img'] === NULL){
         $query_result_profile['img'] = 'default.jpg';
