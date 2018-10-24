@@ -24,7 +24,7 @@
     <div class="search-bar field">
         <input type="text" id="form-search-query" placeholder="Input search terms..." onclick="this.select()"/>
     </div>
-    <a href="../View/search-result.php">
+    <a href="../App/search-result.php">
         <button class="search-bar button" type="submit">Search</button>
     </a>
 </div>
