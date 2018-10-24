@@ -5,4 +5,5 @@ $user = 'root';
 $pass = '';
 $db = 'probook';
 $mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+
 ?>

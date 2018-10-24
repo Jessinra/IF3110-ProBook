@@ -1,30 +1,27 @@
 <?php
-    require_once '../config.php';
-    
-    // echo basename($_SERVER['PHP_SELF'])."<br/>";
-    // echo basename(__FILE__);
 
-    if(basename($_SERVER['PHP_SELF']) == 'login.php' || basename($_SERVER['PHP_SELF']) == 'register.php'){
-        if(isset($_COOKIE['ID'])){
-            $userid = $_COOKIE['ID'];
-            $query_string = "SELECT `id` FROM `active_users` WHERE `id`=$userid";
-            $query_result = $mysqli->query($query_string);
-            if(!empty($query_result)){
-                header('Location: search.php');
-            }
+    require_once '../Model/mysqli.php';
+
+    if(isCurrentPage('login.php') || isCurrentPage('register.php')){
+        if(isAuthenticated($mysqli)) {
+            header('Location: ../App/search.php');
         }
     }
     else{
-        if(!isset($_COOKIE['ID'])){
-            header('Location: login.php');
+        if(!(isAuthenticated($mysqli))) {
+            header('Location: ../App/login.php');
         }
-        else{
+    }
+
+    function isCurrentPage($page_name){
+        return basename($_SERVER['PHP_SELF']) == $page_name;
+    }
+
+    function isAuthenticated($mysqli){
+        if(isset($_COOKIE['ID'])){
             $userid = $_COOKIE['ID'];
-            $query_string = "SELECT `id` FROM `active_users` WHERE `id`=$userid";
-            $query_result = $mysqli->query($query_string);
-            if(empty($query_result)){
-                header('Location: login.php');
-            }
+            return(isActive($mysqli, $userid));
         }
+        return false;
     }
 ?>
