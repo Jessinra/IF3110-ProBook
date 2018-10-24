@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../View/CSS/profile-edit.css">
 </head>
 
-<body>
+<body onresize="resizeEvent()">
     <div class="header">
         <?php
         include("../View/header.php");
@@ -23,8 +23,8 @@
         </div>
         <form action="#" method="post">
             <div class="flex-container flex-column">
-                <div class="flex-container field image-field">
-                    <div class="form-label image-container">
+                <div class="flex-container field image-field" id="image-section">
+                    <div class="form-label image-container" id="image-container">
                         <img id="user-image" src=<?php echo "\"".$query_result_profile_edit["img"]."\""?>/>
                     </div>
                     <div class="form-space"></div>
