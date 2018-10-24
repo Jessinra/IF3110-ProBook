@@ -18,6 +18,9 @@ if (isset($_POST['username'])) {
             loginFailedHandler();
         }
     }
+    else{
+        loginFailedHandler();
+    }
 }
 
 function isPasswordMatch($input_password, $user)
