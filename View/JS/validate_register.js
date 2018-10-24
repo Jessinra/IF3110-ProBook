@@ -124,7 +124,7 @@ function validatePhoneNumber() {
 	var inName = "phone_number";
 
 	if (document.getElementById(inName).value!="") {
-		if (/\d{9,12}$/.test(document.getElementById(inName).value)) {
+		if (/^[0-9]{9,12}$/.test(document.getElementById(inName).value)) {
 			document.getElementById(inName).style.borderWidth="2px";
 			document.getElementById(inName).style.borderColor="#02702c";
 			return true;
