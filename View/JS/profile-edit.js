@@ -12,3 +12,7 @@ function updateimagesection(filename, file){
 function gotoprofile(){
     location.href = "profile.php";
 }
+
+function resizeEvent(){
+    document.getElementById('image-container').style.height = document.getElementById('image-container').clientWidth + "px";
+}
