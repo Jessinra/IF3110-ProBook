@@ -101,5 +101,5 @@
 </div>
 </body>
 
-<script type="text/javascript" src="JS/validate_register.js"></script>
+<script type="text/javascript" src="../View/JS/validate_register.js"></script>
 </html>
