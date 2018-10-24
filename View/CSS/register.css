@@ -110,7 +110,7 @@ label {
 #submit {
     background-color: #ffffff;
     width: 30%;
-    height: 70%;
+    height: auto;
     border: 1px solid #f26600;
     border-radius: 7px;
     font-family: "BebasNeue", sans-serif;
