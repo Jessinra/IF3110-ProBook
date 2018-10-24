@@ -1,7 +1,3 @@
-<?php
-    require '../config.php';
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -11,15 +7,6 @@
     <link rel="stylesheet" type="text/css" href="../View/CSS/login.css">
     <script type="text/javascript" src="JS/validate_login.js"></script>
 </head>
-
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-  if (isset($_POST['login'])) {
-    require '../App/login.php';
-  }
-}
-?>
 
 <body>
 <div class="form">

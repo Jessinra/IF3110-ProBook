@@ -1,5 +1,5 @@
 <?php 
-    require_once '../auth-validator.php';
+    require_once '../App/auth-validator.php';
 
     $query_result_profile = get_active_user($mysqli);
 

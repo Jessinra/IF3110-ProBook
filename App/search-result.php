@@ -1,5 +1,5 @@
 <?php
-    require_once '../auth-validator.php';
+    require_once '../App/auth-validator.php';
 
     $query_result_search_result = array();
     $idx = 0;

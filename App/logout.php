@@ -1,6 +1,6 @@
 <?php
 
-require_once '../auth-validator.php';
+require_once '../App/auth-validator.php';
 
 remove_active_user($mysqli);
 invalidate_cookie();
