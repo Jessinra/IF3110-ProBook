@@ -17,49 +17,6 @@
     ?>
 </div>
 
-
-<!--Setup dictionary as query result (dummy) -->
-
-<?php
-$query_result = array();
-
-$query_entry = array(
-    'thumbnail' => "../View/Src/search_result/thumbnail_01.png",
-    'title' => "Platelets are cute !",
-    'author' => "Kaito Yamamura",
-    'ratings' => 4.8,
-    'max_rating' => 5.0,
-    'votes' => 10000,
-    'description' => 'Lorem ipsum dolor sit amet, populo scripserit eos id, vim probo solum forensibus ei. Autem prompta
-                consequuntur an ius, sint adhuc ex usu. No his tota dicant, vis aeterno suscipiantur no, an assentior
-                intellegebat cum. Falli homero id mea.',
-);
-$query_result[0] = $query_entry;
-$query_result[2] = $query_entry;
-$query_result[4] = $query_entry;
-$query_result[6] = $query_entry;
-$query_result[8] = $query_entry;
-
-$query_entry = array(
-    'thumbnail' => "../View/Src/search_result/thumbnail_03.png",
-    'title' => "Megumi so cute !",
-    'author' => "Yamada Shimamura",
-    'ratings' => 5.8,
-    'max_rating' => 5.0,
-    'votes' => 1000000,
-    'description' => 'Lorem ipsum dolor sit amet, populo scripserit eos id, vim probo solum forensibus ei. Autem prompta
-                consequuntur an ius, sint adhuc ex usu. No his tota dicant, vis aeterno suscipiantur no, an assentior
-                intellegebat cum. Falli homero id mea.',
-);
-$query_result[1] = $query_entry;
-$query_result[3] = $query_entry;
-$query_result[5] = $query_entry;
-$query_result[7] = $query_entry;
-
-ksort($query_result);
-
-?>
-
 <div class="page-title">
     <h1 id="page-title-search">Search Result</h1>
     <span id="search-result-found">Found <u><?php echo sizeof($query_result_search_result)?></u> result(s)</span>

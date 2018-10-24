@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2018 at 03:38 PM
+-- Generation Time: Oct 24, 2018 at 07:25 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.1.18
 
@@ -46,6 +46,14 @@ CREATE TABLE `books` (
   `desc` text NOT NULL,
   `img` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `books`
+--
+
+INSERT INTO `books` (`id`, `title`, `amount`, `writer`, `desc`, `img`) VALUES
+(1, 'Naruto', 15, 'Masashi Kishimoto', 'Lorem ipsum dolor sit amet, populo scripserit eos id, vim probo solum forensibus ei. Autem prompta consequuntur an ius, sint adhuc ex usu. No his tota dicant, vis aeterno suscipiantur no, an assentior intellegebat cum. Falli homero id mea.', 'naruto.jpg'),
+(2, 'Boruto', 20, 'Ukyo Kodachi', 'Lorem ipsum dolor sit amet, populo scripserit eos id, vim probo solum forensibus ei. Autem prompta consequuntur an ius, sint adhuc ex usu. No his tota dicant, vis aeterno suscipiantur no, an assentior intellegebat cum. Falli homero id mea.', 'boruto.jpg');
 
 -- --------------------------------------------------------
 
@@ -173,7 +181,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
