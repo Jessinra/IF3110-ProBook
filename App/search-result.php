@@ -1,6 +1,5 @@
 <?php
     require_once '../auth-validator.php';
-    require_once '../config.php';
 
     $query_result_search_result = array();
     $idx = 0;
@@ -16,5 +15,7 @@
             'description' => $r['desc']
         );
     }
+
+
     require_once '../View/search-result.php';
 ?>

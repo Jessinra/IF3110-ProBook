@@ -1,7 +1,7 @@
 <?php 
     require_once '../auth-validator.php';
 
-    $query_result_profile = getActiveUser($mysqli);
+    $query_result_profile = get_active_user($mysqli);
 
 
     if($query_result_profile['img'] === NULL){

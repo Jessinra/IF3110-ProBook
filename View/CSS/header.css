@@ -78,11 +78,13 @@
     flex-grow: 1;
 }
 
+.header-bar .power-button a{
+    display: flex;
+}
+
 .header-bar .power-button img {
     padding: 0 15% 0 15%;
     margin: 5%;
-    /*max-width: none;*/
-    /*max-height: 90%;*/
     object-fit: contain;
     overflow: auto;
 }

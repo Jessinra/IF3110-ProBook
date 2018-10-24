@@ -11,7 +11,7 @@ if (isset($_POST['username'])) {
     if ($user != null) {
         if (isPasswordMatch($_POST['password'], $user)) {
             setAuthenticated($user);
-            addActiveUser($mysqli, $user);
+            add_active_user($mysqli, $user);
             header('Location: search.php');
         }
         else{

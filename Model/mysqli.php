@@ -17,18 +17,26 @@ function isActive($mysqli, $userid){
     return ($query_result->num_rows != 0);
 }
 
-function getActiveUser($mysqli){
+function get_active_user($mysqli){
     $user_id = $_COOKIE["ID"];
     $queryString = "SELECT `username`, `name`, `email`, `address`, `phone_number`, `img` FROM `users` WHERE `id` = $user_id;";
     return $mysqli->query($queryString)->fetch_assoc();
 }
 
-function addActiveUser($mysqli, $user)
+
+function add_active_user($mysqli, $user)
 {
     $ID = $user['id'];
 
-    $queryString = "INSERT IGNORE INTO active_users values ('$ID')";
+    $queryString = "INSERT IGNORE INTO active_users VALUES ('$ID')";
     $mysqli->query($queryString);
+}
+
+function remove_active_user($mysqli){
+
+    $user_id = $_COOKIE["ID"];
+    $query_string = "DELETE FROM active_users WHERE `id` = $user_id;";
+    $mysqli->query($query_string);
 }
 
 function addBook($mysqli, $bookDetail)
@@ -57,8 +65,6 @@ function test_addBook(){
 
     addBook($mysqli, $bookDetail);
 }
-
-
 
 
 
