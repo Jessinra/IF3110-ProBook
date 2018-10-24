@@ -1,6 +1,12 @@
 .profile.home {
     background-color: #00374c;
     padding: 14px;
+    flex-direction: row-reverse;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
 }
 
 .profile.edit-button {
@@ -9,7 +15,7 @@
     height: auto;
 }
 
-.profile.edit-button button {
+/* .profile.edit-button button {
     background: none;
     color: inherit;
     border: none;
@@ -19,7 +25,7 @@
     outline: inherit;
     width: 100%;
     height: auto;
-}
+} */
 
 .profile.edit-button img {
     width: 100%;
@@ -36,6 +42,7 @@
 
 .profile.picture {
     margin-top: 10px;
+    height: 30%;
     width: 30%;
     background-color: white;
     border-radius: 50%;
@@ -44,12 +51,11 @@
 
 .profile.picture img {
     width: 100%;
+    height: 100%;
     border-radius: 50%;
-}
-
-.center {
-    margin: auto;
-    width: 50%;
+    object-fit: fill;
+    margin: 0;
+    display: block;
 }
 
 .profile.details {
