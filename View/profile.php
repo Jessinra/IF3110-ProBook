@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../View/CSS/profile.css">
 </head>
 
-<body>
+<body onresize="resizeEvent()">
     <div class="header">
         <?php
         include("../View/header.php");
@@ -23,7 +23,7 @@
                     <img src="../View/Src/profile/icon/edit.png"/>
                 </a>
             </div>
-            <div class="profile picture center">
+            <div class="profile picture center" id="image-container">
                 <img src=<?php echo "\"".$query_result_profile["img"]."\"" ?>/>
             </div>
             <div class="profile name center">
@@ -87,6 +87,7 @@
 
 <script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
+    <script type="text/javascript" src="../View/JS/profile.js"></script>
 <script>
     window.onload = function () {
         switch_to_profile();
