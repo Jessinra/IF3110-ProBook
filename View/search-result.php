@@ -34,7 +34,9 @@
                 </div>
                 <div class="author">
                     <span class="author-name"><?php echo $query_entry['author'] ?></span> -
-                    <span class="ratings"><?php echo $query_entry['ratings'] ?>/<?php echo $query_entry['max_rating'] ?></span>
+                    <span class="ratings"><?php echo sprintf("%.1f", $query_entry['ratings']) ?>
+                        /
+                        <?php echo sprintf("%.1f", $query_entry['max_rating']) ?></span>
                     <span class="votes">(<?php echo $query_entry['votes'] ?> votes)</span>
 
                 </div>

@@ -79,14 +79,16 @@ function find_book_by_title($query)
     $search_result = array();
     $idx = 0;
     while ($r = $query_result->fetch_array()) {
+
+        $book_rating = get_rating_and_count($r['id']);
         $search_result[$idx++] = array(
             'id' => $r['id'],
             'thumbnail' => $default_book_image_path. $r['img'],
             'title' => $r['title'],
             'author' => $r['author'],
-            'ratings' => 4.0,
+            'ratings' => $book_rating['average'],
             'max_rating' => 5.0,
-            'votes' => 10000,
+            'votes' => $book_rating['count'],
             'description' => $r['desc']
         );
     }
@@ -102,13 +104,16 @@ function find_book_by_id($book_id)
     $query_result = $mysqli->query($query_string);
 
     if ($query_result->num_rows != 0){
+
+
         $book_details = $query_result->fetch_assoc();
+        $book_rating = get_rating_and_count($book_details['id']);
         $search_result = array(
             'id' => $book_details['id'],
             'thumbnail' => $default_book_image_path. $book_details['img'],
             'title' => $book_details['title'],
             'author' => $book_details['author'],
-            'ratings' => 4.0,
+            'ratings' => $book_rating['average'],
             'max_rating' => 5.0,
             'description' => $book_details['desc']
         );
@@ -171,6 +176,25 @@ function find_reviews($book_id)
             'review' => $r['comment'],
             'rating' => $r['rating'],
             'max_rating' => 5.0,
+        );
+    }
+
+    return $search_result;
+}
+
+function get_rating_and_count($id_book){
+
+    global $mysqli;
+    $query_string = "SELECT avg(`rating`) as average, count(*) as count FROM `reviews` WHERE `book_id`='$id_book' GROUP BY `book_id`;";
+    $query_result = $mysqli->query($query_string);
+
+    if ($query_result->num_rows != 0){
+        $search_result = $query_result->fetch_assoc();
+    }
+    else{
+        $search_result = array(
+            'average' => 0,
+            'count' => 0,
         );
     }
 
