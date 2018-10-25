@@ -21,40 +21,7 @@
     <h1 id="page-title-search">History</h1>
 </div>
 
-<?php
-$query_result = array();
-
-$query_entry = array(
-    'thumbnail' => "../View/Src/search_result/thumbnail_01.png",
-    'title' => "Platelets are cute !",
-    'amount' => 4,
-    'review' => True,
-    'order-date' => "30 September 2018",
-    'order-number' => 2,
-);
-
-for ($i = 0; $i < 5; $i++) {
-    $query_result[$i * 2] = $query_entry;
-}
-
-$query_entry = array(
-    'thumbnail' => "../View/Src/search_result/thumbnail_03.png",
-    'title' => "Megumi is cuter !",
-    'amount' => 2,
-    'review' => False,
-    'order-date' => "5 Maret 2018",
-    'order-number' => 33,
-);
-
-for ($i = 0; $i < 5; $i++) {
-    $query_result[$i * 2 + 1] = $query_entry;
-}
-
-ksort($query_result);
-?>
-
-
-<?php foreach ($query_result as $query_entry) { ?>
+<?php foreach ($query_result_history as $query_entry) { ?>
     <div class="history container">
         <div class="history thumbnail">
             <img src="<?php echo $query_entry['thumbnail'] ?>" alt="search thumbnail">
@@ -80,7 +47,7 @@ ksort($query_result);
 
         <div class="history description-right">
             <div>
-                <span id="order-date"><?php echo $query_entry['order-date'] ?></span>
+                <span id="order-date">DD-MM-YYYY</span>
                 <span id="order-number">Nomor Order: #<?php echo $query_entry['order-number'] ?></span>
             </div>
             <?php
