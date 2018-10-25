@@ -35,7 +35,6 @@ CREATE TABLE `active_users` (
 LOCK TABLES `active_users` WRITE;
 /*!40000 ALTER TABLE `active_users` DISABLE KEYS */;
 INSERT INTO `active_users` VALUES (2),(6);
-/*!40000 ALTER TABLE `active_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -174,8 +173,7 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES (1,'harry','harry','Harry Setiawan Hamjaya','harry@gmail,com','08123456789','thumbnail_01.png','Jl satu no 1'),(2,'tony','tony','Tony Tony','tony@gmail,com','08234567891','thumbnail_02.png','Jl dua no 2'),(3,'jessin','jessin','Jessin Donnyson','jessin@gmail,com','08345678912','thumbnail_03.png','Jl tiga no 3'),(4,'jeffry','jeffry','Jeffry Jeffry','jeffry@gmail,com','08456789123','thumbnail_04.png','Jl empat no 4'),(5,'habibi','habibi','Habibi Haidir','habibi@gmail,com','08567891234','thumbnail_05.png','Jl lima no 5'),(6,'tonydark','tonydark','tony','tonydarkx98@gmail.com','08666666666',NULL,'jalan kegelapan no 5 :D');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;UNLOCK TABLES;
 
 --
 -- Final view structure for view `popularities`
