@@ -19,7 +19,9 @@
             );
             require_once '../View/review.php';
         }
-        // ELSE require error page; 
+        else{
+            header('Location: ../App/history.php');
+        }
     }
-    // ELSE require error page;
+    header('Location: ../App/history.php');
 ?>
