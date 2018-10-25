@@ -17,8 +17,8 @@ isset($_POST['phone_number'])){
     if ($mysqli->query($sql)){
         $result = $mysqli->query("SELECT * FROM users WHERE username='$username'");
         $user = $result->fetch_assoc();
-        setAuthenticated($user);
-        add_active_user($user);
+        $access_token = setAuthenticated();
+        add_active_user($user, $access_token);
         header('Location: search.php');
     }
     else{
@@ -30,11 +30,6 @@ function registerFailedHandler()
 {
     $message = "Registration Failed!";
     echo "<script type='text/javascript'>alert('$message');</script>";
-}
-
-function setAuthenticated($user)
-{
-    setcookie("ID", $user['id'], time() + (86400 * 30));
 }
 
 require_once "../View/register.php";

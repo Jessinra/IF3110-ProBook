@@ -9,7 +9,7 @@ $payload = json_decode($_POST['payload'], true);
 $largest_used_id = get_largest_id("transactions");
 $transaction = array(
     "id" => ++$largest_used_id,
-    "user_id" => $_COOKIE['ID'],
+    "user_id" => get_active_user_id(),
     "book_id" => $payload['book_id'],
     "amount" => $payload['order-quantity'],
 );

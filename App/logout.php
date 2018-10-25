@@ -10,5 +10,5 @@ header('Location: login.php');
 
 function invalidate_cookie()
 {
-    setcookie("ID", "-999", time() + (1));
+    setcookie("token", "invalid", time() + (1));
 }

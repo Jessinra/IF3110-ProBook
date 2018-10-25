@@ -8,7 +8,7 @@
 
     if(isset($_POST['name']) && isset($_POST['address']) && isset($_POST['phone_number'])){
 
-        $user_id = $_COOKIE['ID'];
+        $user_id = get_active_user_id();
         $user_name = "\"".$_POST['name']."\"";
         $user_address = "\"".$_POST['address']."\"";
         $user_phone_number = "\"".$_POST['phone_number']."\"";

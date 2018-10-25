@@ -14,10 +14,10 @@ function findUser($username)
     }
 }
 
-function isActive($userid)
+function isActive($access_token)
 {
     global $mysqli;
-    $query_string = "SELECT `id` FROM `active_users` WHERE `id`=$userid";
+    $query_string = "SELECT `id` FROM `active_users` WHERE `token`='$access_token'";
     $query_result = $mysqli->query($query_string);
     return ($query_result->num_rows != 0);
 }
@@ -25,25 +25,32 @@ function isActive($userid)
 function get_active_user()
 {
     global $mysqli;
-    $user_id = $_COOKIE["ID"];
-    $queryString = "SELECT `username`, `name`, `email`, `address`, `phone_number`, `img` FROM `users` WHERE `id` = $user_id;";
+    $user_id = get_active_user_id();
+    $queryString = "SELECT * FROM users WHERE `id` = '$user_id';";
     return $mysqli->query($queryString)->fetch_assoc();
 }
 
+function get_active_user_id(){
+    global $mysqli;
+    $access_token = $_COOKIE["token"];
+    $query_string = "SELECT id FROM active_users WHERE `token` = '$access_token';";
+    $query_result = $mysqli->query($query_string)->fetch_assoc();
+    return $query_result['id'];
+}
 
-function add_active_user($user)
+function add_active_user($user, $access_token)
 {
     global $mysqli;
-    $ID = $user['id'];
-    $queryString = "INSERT IGNORE INTO active_users VALUES ('$ID')";
+    $id = $user['id'];
+    $queryString = "REPLACE  INTO active_users VALUES ('$id', '$access_token');";
     $mysqli->query($queryString);
 }
 
 function remove_active_user()
 {
     global $mysqli;
-    $user_id = $_COOKIE["ID"];
-    $query_string = "DELETE FROM active_users WHERE `id` = $user_id;";
+    $access_token = $_COOKIE["token"];
+    $query_string = "DELETE FROM active_users WHERE `token` = '$access_token';";
     $mysqli->query($query_string);
 }
 
@@ -185,3 +192,5 @@ function get_rating_and_count($id_book){
     }
     return $search_result;
 }
+
+

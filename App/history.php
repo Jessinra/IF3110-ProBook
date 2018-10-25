@@ -1,7 +1,7 @@
 <?php 
     require_once '../App/auth-validator.php';
 
-    $user_id = $_COOKIE['ID'];
+    $user_id = get_active_user_id();
     $idx = 0;
     $query_result_history = array();
     $query_string_history = $mysqli->query("SELECT transactions.order_date as order_date,transactions.id as id , transactions.amount as amount , transactions.is_review as review , books.img as thumbnail , books.title as title
@@ -26,6 +26,8 @@
             'order-number' => $r['id']
         );
     }
+
+    $query_result_history = array_reverse($query_result_history);
     
     require_once '../View/history.php';
 ?>
