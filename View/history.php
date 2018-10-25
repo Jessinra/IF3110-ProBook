@@ -52,7 +52,7 @@
             </div>
             <?php
             if (!$query_entry['review']) { ?>
-                <a href="../View/review.php">
+                <a href=<?php echo "\"../App/review.php?order-number=".$query_entry['order-number']."\"" ?> >
                     <button class="search-result button">Review</button>
                 </a>
             <?php } ?>
