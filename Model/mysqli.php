@@ -86,8 +86,6 @@ function find_book_by_id($mysqli, $book_id)
     $query_string = "SELECT * FROM `books` WHERE `id` = $book_id";
     $query_result = $mysqli->query($query_string);
 
-    echo print_r($query_result);
-
     if ($query_result->num_rows != 0){
         $book_details = $query_result->fetch_assoc();
         $search_result = array(
