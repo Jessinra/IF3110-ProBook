@@ -47,7 +47,7 @@
 
         <div class="history description-right">
             <div>
-                <span id="order-date">DD-MM-YYYY</span>
+                <span id="order-date"><?php echo $query_entry['order-date'] ?></span>
                 <span id="order-number">Nomor Order: #<?php echo $query_entry['order-number'] ?></span>
             </div>
             <?php

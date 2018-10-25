@@ -5,17 +5,69 @@
     $user_id = $_COOKIE['ID'];
     $idx = 0;
     $query_result_history = array();
-    $query_string_history = $mysqli->query("SELECT transactions.id as id , transactions.amount as amount , transactions.is_review as review , books.img as thumbnail , books.title as title
+    $query_string_history = $mysqli->query("SELECT transactions.order_date as order_date,transactions.id as id , transactions.amount as amount , transactions.is_review as review , books.img as thumbnail , books.title as title
     FROM transactions JOIN books on transactions.book_id=books.id
     WHERE transactions.user_id = $user_id");
 
     while( $r = $query_string_history->fetch_array()){
+        $temp = substr($r['order_date'], 5, 2);
+        $tahun = substr($r['order_date'], 0, 4);
+        $tanggal = substr($r['order_date'], 8, 2);
+        if( $temp == 1)
+        {
+            $bulan = "Januari";
+        }
+        else if( $temp == 2)
+        {
+            $bulan = "Februari";
+        }
+        else if( $temp == 3)
+        {
+            $bulan = "Maret";
+        }
+        else if( $temp == 4)
+        {
+            $bulan = "April";
+        }
+        else if( $temp == 5)
+        {
+            $bulan = "Mei";
+        }
+        else if( $temp == 6)
+        {
+            $bulan = "Juni";
+        }
+        else if( $temp == 7)
+        {
+            $bulan = "Juli";
+        }
+        else if( $temp == 8)
+        {
+            $bulan = "Agustus";
+        }
+        else if( $temp == 9)
+        {
+            $bulan = "September";
+        }
+        else if( $temp == 10)
+        {
+            $bulan = "Oktober";
+        }
+        else if( $temp == 11)
+        {
+            $bulan = "November";
+        }
+        else if( $temp == 12)
+        {
+            $bulan = "Desember";
+        } 
+        $order_date = $tanggal.' '.$bulan.' '.$tahun; 
         $query_result_history[$idx++] = array(
             'thumbnail' => $r['thumbnail'],
             'title' => $r['title'],
             'amount' => $r['amount'],
             'review' => $r['review'],
-            //'order-date' => $r['order-date'],
+            'order-date' => $order_date,
             'order-number' => $r['id']
         );
     }
