@@ -186,8 +186,9 @@ function get_rating_and_count($id_book){
     $idx = 0;
     while ($r = $query_result->fetch_array()) {
         $search_result[$idx++] = array(
+            'book_id' => $r['book_id'],
             'average' => $r['avg'],
-            'count' => $r['cnt'],
+            'count' => $r['cnt']
         );
     }
     return $search_result;
