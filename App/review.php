@@ -23,5 +23,7 @@
             header('Location: ../App/history.php');
         }
     }
-    header('Location: ../App/history.php');
+    else{
+        header('Location: ../App/history.php');
+    }
 ?>
