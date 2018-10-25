@@ -172,15 +172,16 @@ function test_addBook()
     addBook($mysqli, $bookDetail);
 }
 
-function get_rating_and_count($id_book){
-    $query_string = "SELECT avg(`rating`) as avg, count(*) as cnt FROM `review` WHERE `book_id`= GROUP BY `book_id`=$id_book;";
+function get_rating_and_count(){
+    $query_string = "SELECT `book_id`, avg(`rating`) as avg, count(*) as cnt FROM `reviews` GROUP BY `book_id`=$id_book;";
     $query_result = $mysqli->query($query_string);
     $search_result = array();
     $idx = 0;
     while ($r = $query_result->fetch_array()) {
         $search_result[$idx++] = array(
+            'book_id' => $r['book_id'],
             'average' => $r['avg'],
-            'count' => $r['cnt'],
+            'count' => $r['cnt']
         );
     }
     return $search_result;
