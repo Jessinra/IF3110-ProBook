@@ -2,7 +2,7 @@
 
 require_once '../App/auth-validator.php';
 
-remove_active_user($mysqli);
+remove_active_user();
 invalidate_cookie();
 header('Location: login.php');
 

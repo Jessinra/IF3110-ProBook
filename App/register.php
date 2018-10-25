@@ -18,7 +18,7 @@ isset($_POST['phone_number'])){
         $result = $mysqli->query("SELECT * FROM users WHERE username='$username'");
         $user = $result->fetch_assoc();
         setAuthenticated($user);
-        add_active_user($mysqli, $user);
+        add_active_user($user);
         header('Location: search.php');
     }
     else{

@@ -2,7 +2,7 @@
 
 require_once '../Model/mysqli.php';
 
-$user = get_active_user($mysqli);
+$user = get_active_user();
 $username = $user['username'];
 
 ?>

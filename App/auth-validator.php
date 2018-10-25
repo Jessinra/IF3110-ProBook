@@ -20,7 +20,7 @@
     function isAuthenticated($mysqli){
         if(isset($_COOKIE['ID'])){
             $userid = $_COOKIE['ID'];
-            return(isActive($mysqli, $userid));
+            return(isActive($userid));
         }
         return false;
     }

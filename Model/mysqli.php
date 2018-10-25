@@ -1,9 +1,11 @@
 <?php
 require_once '../Database/config.php';
+require_once '../Static/default_routes.php';
 //error_reporting(0);
 
-function findUser($mysqli, $username)
+function findUser($username)
 {
+    global $mysqli;
     $result = $mysqli->query("SELECT * FROM users WHERE username='$username'");
     if ($result->num_rows == 0) {
         return null;
@@ -12,39 +14,43 @@ function findUser($mysqli, $username)
     }
 }
 
-function isActive($mysqli, $userid)
+function isActive($userid)
 {
+    global $mysqli;
     $query_string = "SELECT `id` FROM `active_users` WHERE `id`=$userid";
     $query_result = $mysqli->query($query_string);
     return ($query_result->num_rows != 0);
 }
 
-function get_active_user($mysqli)
+function get_active_user()
 {
+    global $mysqli;
     $user_id = $_COOKIE["ID"];
     $queryString = "SELECT `username`, `name`, `email`, `address`, `phone_number`, `img` FROM `users` WHERE `id` = $user_id;";
     return $mysqli->query($queryString)->fetch_assoc();
 }
 
 
-function add_active_user($mysqli, $user)
+function add_active_user($user)
 {
+    global $mysqli;
     $ID = $user['id'];
-
     $queryString = "INSERT IGNORE INTO active_users VALUES ('$ID')";
     $mysqli->query($queryString);
 }
 
-function remove_active_user($mysqli)
+function remove_active_user()
 {
-
+    global $mysqli;
     $user_id = $_COOKIE["ID"];
     $query_string = "DELETE FROM active_users WHERE `id` = $user_id;";
     $mysqli->query($query_string);
 }
 
-function addBook($mysqli, $bookDetail)
+function addBook($bookDetail)
 {
+    global $mysqli;
+
     $id = $bookDetail['id'];
     $title = $bookDetail['title'];
     $amount = $bookDetail['amount'];
@@ -56,9 +62,10 @@ function addBook($mysqli, $bookDetail)
     $mysqli->query($queryString);
 }
 
-function find_book_by_title($mysqli, $query)
+function find_book_by_title($query)
 {
-
+    global $mysqli;
+    global $default_book_image_path;
     $query_string = "SELECT * FROM `books` WHERE `title` LIKE '%$query%'";
     $query_result = $mysqli->query($query_string);
 
@@ -67,7 +74,7 @@ function find_book_by_title($mysqli, $query)
     while ($r = $query_result->fetch_array()) {
         $search_result[$idx++] = array(
             'id' => $r['id'],
-            'thumbnail' => $r['img'],
+            'thumbnail' => $default_book_image_path. $r['img'],
             'title' => $r['title'],
             'author' => $r['author'],
             'ratings' => 4.0,
@@ -80,9 +87,10 @@ function find_book_by_title($mysqli, $query)
     return $search_result;
 }
 
-function find_book_by_id($mysqli, $book_id)
+function find_book_by_id($book_id)
 {
-
+    global $mysqli;
+    global $default_book_image_path;
     $query_string = "SELECT * FROM `books` WHERE `id` = $book_id";
     $query_result = $mysqli->query($query_string);
 
@@ -90,7 +98,7 @@ function find_book_by_id($mysqli, $book_id)
         $book_details = $query_result->fetch_assoc();
         $search_result = array(
             'id' => $book_details['id'],
-            'thumbnail' => $book_details['img'],
+            'thumbnail' => $default_book_image_path. $book_details['img'],
             'title' => $book_details['title'],
             'author' => $book_details['author'],
             'ratings' => 4.0,
@@ -102,15 +110,18 @@ function find_book_by_id($mysqli, $book_id)
     return null;
 }
 
-function get_largest_id($mysqli, $table_name){
+function get_largest_id($table_name){
+    global $mysqli;
     $queryString = "SELECT max(id) as max_id from $table_name";
     $result = $mysqli->query($queryString)->fetch_assoc();
     return $result['max_id'];
 }
 
 
-function add_transaction($mysqli, $transaction)
+function add_transaction($transaction)
 {
+    global $mysqli;
+
     $id = $transaction['id'];
     $user_id = $transaction['user_id'];
     $book_id = $transaction['book_id'];
@@ -120,8 +131,10 @@ function add_transaction($mysqli, $transaction)
     $mysqli->query($queryString);
 }
 
-function add_review($mysqli, $review)
+function add_review($review)
 {
+    global $mysqli;
+
     $id = $review['id'];
     $transaction_id = $review['transaction_id'];
     $book_id = $review["book_id"];
@@ -134,19 +147,20 @@ function add_review($mysqli, $review)
 
 }
 
-function find_reviews($mysqli, $book_id)
+function find_reviews($book_id)
 {
+    global $mysqli;
+    global $default_profile_image_path;
 
     $queryString = "SELECT username, img, rating, comment FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.book_id=$book_id;";
     $query_result = $mysqli->query($queryString);
-
 
     $search_result = array();
     $idx = 0;
     while ($r = $query_result->fetch_array()) {
         $search_result[$idx++] = array(
             'username' => $r['username'],
-            'thumbnail' => $r['img'],
+            'thumbnail' => $default_profile_image_path . $r['img'],
             'review' => $r['comment'],
             'rating' => $r['rating'],
             'max_rating' => 5.0,
@@ -156,23 +170,9 @@ function find_reviews($mysqli, $book_id)
     return $search_result;
 }
 
-
-function test_addBook()
-{
-
-    $bookDetail = array(
-        "id" => 500,
-        "title" => "d1 book",
-        "amount" => 2,
-        "author" => "mr rsdfaight",
-        "description" => "lorem itsum dorol dnsnadk",
-        "img" => "../View/Src/sdlfkajdlkfajl.jpg"
-    );
-
-    addBook($mysqli, $bookDetail);
-}
-
 function get_rating_and_count($id_book){
+
+    global $mysqli;
     $query_string = "SELECT avg(`rating`) as avg, count(*) as cnt FROM `review` WHERE `book_id`= GROUP BY `book_id`=$id_book;";
     $query_result = $mysqli->query($query_string);
     $search_result = array();
