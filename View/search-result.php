@@ -46,7 +46,7 @@
         </div>
 
         <div>
-            <a href="../View/detail.php?title=<?php echo $query_entry['title']?>">
+            <a href="../App/detail.php?id=<?php echo $query_entry['id']?>">
                 <button class="search-result button">Detail</button>
             </a>
         </div>
