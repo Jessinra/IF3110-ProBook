@@ -6,12 +6,12 @@ require_once '../App/auth-validator.php';
 if (isset($_POST['username'])) {
 
     $username = $mysqli->escape_string($_POST['username']);
-    $user = findUser($mysqli, $username);
+    $user = findUser($username);
 
     if ($user != null) {
         if (isPasswordMatch($_POST['password'], $user)) {
             setAuthenticated($user);
-            add_active_user($mysqli, $user);
+            add_active_user($user);
             header('Location: search.php');
         }
         else{

@@ -84,7 +84,7 @@ Pada halaman ini, ditampilkan nama lengkap, username, email, alamat, nomor telep
 
 ### Edit-Profile
 
-![](mocks/edit_profile.png)
+![](mocks/done/edit_profile.png)
 
 Pada halaman ini, pengguna dapat mengubah nama yang ditampilkan, alamat, nomor telepon, dan foto profil.
 

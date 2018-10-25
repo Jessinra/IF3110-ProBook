@@ -1,15 +1,22 @@
-<?php 
+<?php
+
     require_once '../App/auth-validator.php';
 
+    function clear_cache(){
+        header("Cache-Control: no-cache, must-revalidate");
+    };
+
     if(isset($_POST['name']) && isset($_POST['address']) && isset($_POST['phone_number'])){
+
         $user_id = $_COOKIE['ID'];
         $user_name = "\"".$_POST['name']."\"";
         $user_address = "\"".$_POST['address']."\"";
         $user_phone_number = "\"".$_POST['phone_number']."\"";
         if(isset($_FILES['img']) && $_FILES['img']['name'] != ""){
-            $profpic_dir = "../View/Src/profile/picture/";
-            $target_name = $user_id.'.'.pathinfo($_FILES['img']['name'])['extension'];
-            move_uploaded_file($_FILES['img']['tmp_name'], $profpic_dir.$target_name);
+
+            $target_name = $default_profile_image_prefix. $user_id.'.'.pathinfo($_FILES['img']['name'])['extension'];
+            move_uploaded_file($_FILES['img']['tmp_name'], $default_profile_image_path.$target_name);
+
             $target_name = "\"".$target_name."\"";
             $query_string = "UPDATE `users` SET `img`=$target_name  WHERE `id` = $user_id";
             $mysqli->query($query_string);
@@ -18,15 +25,14 @@
         $mysqli->query($query_string);
     }
 
-    $query_result_profile = get_active_user($mysqli);
+    $query_result_profile = get_active_user();
 
 
     if($query_result_profile['img'] === NULL){
         $query_result_profile['img'] = 'default.jpg';
     }
 
-    $relative_path_to_profile_pic = "../View/Src/Profile/Users/";
-    $query_result_profile['img'] = $relative_path_to_profile_pic. $query_result_profile['img'];
-
+    $query_result_profile['img'] = $default_profile_image_path. $query_result_profile['img'];
+    clear_cache();
     require_once '../View/profile.php';
 ?>

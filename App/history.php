@@ -1,6 +1,5 @@
 <?php
     require_once '../App/auth-validator.php';
-    require_once '../database/config.php';
 
     $user_id = $_COOKIE['ID'];
 
@@ -31,60 +30,10 @@
         $bulan = [1=>"Januari", 2=>"Februari", 3=>"Maret", 4=>"April", "Mei", "Juni",
                     "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
-        /*
-        if( $temp == 1)
-        {
-            $bulan = "Januari";
-        }
-        else if( $temp == 2)
-        {
-            $bulan = "Februari";
-        }
-        else if( $temp == 3)
-        {
-            $bulan = "Maret";
-        }
-        else if( $temp == 4)
-        {
-            $bulan = "April";
-        }
-        else if( $temp == 5)
-        {
-            $bulan = "Mei";
-        }
-        else if( $temp == 6)
-        {
-            $bulan = "Juni";
-        }
-        else if( $temp == 7)
-        {
-            $bulan = "Juli";
-        }
-        else if( $temp == 8)
-        {
-            $bulan = "Agustus";
-        }
-        else if( $temp == 9)
-        {
-            $bulan = "September";
-        }
-        else if( $temp == 10)
-        {
-            $bulan = "Oktober";
-        }
-        else if( $temp == 11)
-        {
-            $bulan = "November";
-        }
-        else if( $temp == 12)
-        {
-            $bulan = "Desember";
-        } 
-        */
 
         $order_date = $tanggal.' '.$bulan[$temp].' '.$tahun; 
         $query_result_history[$idx++] = array(
-            'thumbnail' => $r['thumbnail'],
+            'thumbnail' => $default_book_image_path. $r['thumbnail'],
             'title' => $r['title'],
             'amount' => $r['amount'],
             'review' => $r['review'],

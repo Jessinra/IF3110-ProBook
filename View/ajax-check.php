@@ -7,9 +7,9 @@ require '../database/config.php';
       $username_query = $mysqli->query("SELECT * FROM users WHERE username = '$username'");
       $count= $username_query->num_rows;
       if($count==0) {
-        echo "<img id='cun' src='../View/Src/register/v.png'></img>";
+        echo "<img id='cun' src='../View/Src/register/v.png'>";
       } else {
-        echo "<img id='cun' src='../View/Src/register/x.png'></img>";
+        echo "<img id='cun' src='../View/Src/register/x.png'>";
       }
     } 
   }
@@ -20,9 +20,9 @@ require '../database/config.php';
       $email_query = $mysqli->query("SELECT * FROM users WHERE email = '$email'");
       $count= $email_query->num_rows;
       if($count==0) {
-        echo "<img id='cem' src='../View/Src/register/v.png'></img>";
+        echo "<img id='cem' src='../View/Src/register/v.png'>";
       } else {
-        echo "<img id='cem' src='../View/Src/register/x.png'></img>";
+        echo "<img id='cem' src='../View/Src/register/x.png'>";
       }
     } 
   }

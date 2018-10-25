@@ -6,7 +6,7 @@ require_once "../Model/mysqli.php";
 $payload = json_decode($_POST['payload'], true);
 
 //Process order
-$largest_used_id = get_largest_id($mysqli, "transactions");
+$largest_used_id = get_largest_id("transactions");
 $transaction = array(
     "id" => ++$largest_used_id,
     "user_id" => $_COOKIE['ID'],
@@ -14,5 +14,5 @@ $transaction = array(
     "amount" => $payload['order-quantity'],
 );
 
-add_transaction($mysqli, $transaction);
+add_transaction($transaction);
 echo $transaction['id'];
