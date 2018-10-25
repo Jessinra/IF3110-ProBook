@@ -6,7 +6,7 @@
         </div>
         <div class="flex-container modal-content">
             <div class="flex-container thumbnail">
-                <img src="Src/modal/check.png" alt="checklist">
+                <img src="../View/Src/modal/check.png" alt="checklist">
             </div>
             <div class="flex-container details">
                 <div class="flex-container status">Pemesanan Berhasil!</div>

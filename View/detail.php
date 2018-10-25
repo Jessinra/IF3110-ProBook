@@ -18,41 +18,6 @@
     ?>
 </div>
 
-<!--MOCK DATA-->
-<?php
-
-$book_details = array(
-    "title" => "Platelets are kawai!",
-    "thumbnail" => "../View/Src/search_result/thumbnail_01.png",
-    "author" => "Yamashita Kurada",
-    "description" => 'Lorem ipsum dolor sit amet, populo scripserit eos id, vim probo solum forensibus ei. Autem prompta
-                consequuntur an ius, sint adhuc ex usu. No his tota dicant, vis aeterno suscipiantur no, an assentior
-                intellegebat cum. Falli homero id mea.',
-    "ratings" => '4.4',
-    "max_rating" => '5.0',
-);
-
-$book_reviews[0] = array(
-    "username" => "Megumi",
-    "thumbnail" => "../View/Src/search_result/thumbnail_03.png",
-    "review" => 'Lorem ipsum dolor sit amet, populo scripserit eos id, vim probo solum forensibus ei. Autem prompta
-                consequuntur an ius, sint adhuc ex usu. No his tota dicant, vis aeterno suscipiantur no, an assentior
-                intellegebat cum. Falli homero id mea.',
-    "rating" => "5.0",
-    "max_rating" => '5.0',
-);
-$book_reviews[1] = array(
-    "username" => "Yukiko",
-    "thumbnail" => "../View/Src/search_result/thumbnail_02.png",
-    "review" => 'When present, it specifies that an option should be pre-selected when the page loads. The pre-selected
-                option will be displayed first in the drop-down list.',
-    "rating" => "3.0",
-    "max_rating" => '5.0',
-);
-
-
-?>
-
 <div class="flex-container detail-container">
     <div class="flex-container">
         <div class="flex-column book-details">
@@ -71,8 +36,8 @@ $book_reviews[1] = array(
                 <span class="rating">☆</span>
                 <span class="rating">☆</span>
             </div>
-            <span class="number-rating"><?php echo $book_details['ratings'] ?>
-                / <?php echo $book_details['max_rating'] ?></span>
+            <span class="number-rating"><?php echo sprintf("%.1f", $book_details['ratings']) ?>
+                / <?php echo sprintf("%.1f", $book_details['max_rating']) ?></span>
         </div>
     </div>
 
@@ -102,7 +67,10 @@ $book_reviews[1] = array(
 
 
     <div class="flex-container flex-column book-review">
-        <h2>Reviews</h2>
+
+        <?php if (sizeof($book_reviews) != 0) { ?>
+            <h2>Reviews</h2>
+        <?php } ?>
         <?php foreach ($book_reviews as $review) { ?>
             <div class="flex-container review-container">
                 <div class="thumbnail">
@@ -120,8 +88,8 @@ $book_reviews[1] = array(
                     <div class="star-ratings">
                         <span class="rating">★</span>
                     </div>
-                    <span class="number-rating"><?php echo $review['rating'] ?>
-                        / <?php echo $book_details['max_rating'] ?></span>
+                    <span class="number-rating"><?php echo sprintf("%.1f", $review['rating']) ?>
+                        / <?php echo sprintf("%.1f", $book_details['max_rating']) ?></span>
                 </div>
             </div>
         <?php } ?>
@@ -130,8 +98,10 @@ $book_reviews[1] = array(
 
 
 <?php
-    include("../View/booking_modal.php");
+include("../View/booking_modal.php");
 ?>
+<input type="hidden" id="hidden_book_id" value="<?php echo $_GET['id'] ?>">
+
 
 </body>
 
@@ -155,12 +125,17 @@ $book_reviews[1] = array(
 
     function submit_order() {
 
+        var book_id = document.querySelector("#hidden_book_id");
+        book_id = book_id.value;
+
         var order_qty = document.getElementsByName("order-quantity")[0];
         order_qty = order_qty.value;
 
-        var url = "../Controller/temp_book_order.php";
-        var payload = {"order-quantity": order_qty};
-
+        var url = "../App/book_order.php";
+        var payload = {
+            "order-quantity": order_qty,
+            "book_id": book_id
+        };
         postAjax(url, payload, show_response);
     }
 </script>

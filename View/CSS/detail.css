@@ -115,6 +115,9 @@ input[type="number"] {
     flex-grow: 1;
     flex-basis: 0;
     padding-top: 2%;
+
+    display:flex;
+    align-items: flex-start;
 }
 
 .review-container .thumbnail img {
@@ -130,12 +133,18 @@ input[type="number"] {
     margin: 0 3%;
     padding-top: 2%;
     text-align: justify;
+
+    display:flex;
+    flex-flow: column;
 }
 
 .review-container .review-ratings {
     flex-grow: 1;
     flex-basis: 0;
     text-align: center;
+
+    display:flex;
+    flex-flow: column;
 }
 
 .review-container .username {
