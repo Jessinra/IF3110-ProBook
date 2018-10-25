@@ -1,8 +1,23 @@
-<?php 
+<?php
     require_once '../App/auth-validator.php';
     require_once '../database/config.php';
 
     $user_id = $_COOKIE['ID'];
+
+    if(isset($_POST['order-number'])){
+        $book_id = $_POST['book-id'];
+        $order_num = $_POST['order-number'];
+        $rating = $_POST['rating'];
+
+        if($mysqli->query("SELECT `book_id` FROM `transactions` WHERE `id`=$order_num AND `is_review`=0;")->num_rows==1){
+            $review = "\"".$_POST['review']."\"";
+            $query_string_review = "INSERT INTO `reviews` (`transaction_id`, `book_id`, `user_id`, `rating`, `comment`) VALUES ($order_num, $book_id, $user_id, $rating, $review);";
+            $mysqli->query($query_string_review);
+            $query_string_transaction = "UPDATE `transactions` SET `is_review`=1 WHERE `id`=$order_num;";
+            $mysqli->query($query_string_transaction);
+        }
+    }
+
     $idx = 0;
     $query_result_history = array();
     $query_string_history = $mysqli->query("SELECT transactions.order_date as order_date,transactions.id as id , transactions.amount as amount , transactions.is_review as review , books.img as thumbnail , books.title as title
