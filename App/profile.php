@@ -8,7 +8,5 @@
         $query_result_profile['img'] = 'default.jpg';
     }
 
-    $query_result_profile['img'] = "../View/Src/profile/sample/".$query_result_profile['img'];
-
     require_once '../View/profile.php';
 ?>
