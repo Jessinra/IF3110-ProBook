@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>History</title>
+    <title>Edit Profile</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../View/CSS/header.css">
@@ -21,7 +21,7 @@
         <div class="title">
             <h1>Edit Profile</h1>
         </div>
-        <form action="#" method="post">
+        <form action="profile.php" method="post" enctype="multipart/form-data" onsubmit="return validate();">
             <div class="flex-container flex-column">
                 <div class="flex-container field image-field" id="image-section">
                     <div class="form-label image-container" id="image-container">
@@ -39,7 +39,7 @@
                                     <button id="file-upload-button" type="button" onclick="browsefile()">Browse ...</button>
                                 </div> 
                             </div>
-                            <input type="file" name="file-to-upload" id="file-to-upload" onchange="updateimagesection(this.value, this.files)" data-buttonText="Browse..." hidden/>
+                            <input type="file" name="img" id="file-to-upload" onchange="updateimagesection(this)" hidden/>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
-                        <input class="input-field" id="profilename" type="text" name="profilename" value=<?php echo "\"".$query_result_profile_edit["name"]."\"" ?> onclick=this.select()>
+                        <input class="input-field" id="name" type="text" name="name" value=<?php echo "\"".$query_result_profile_edit["name"]."\"" ?> onclick=this.select()>
                     </div>
                 </div>
                 <div class="flex-container field">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
-                        <textarea onclick=this.select()><?php echo $query_result_profile_edit["address"] ?></textarea>
+                        <textarea id="address" name="address" onclick=this.select()><?php echo $query_result_profile_edit["address"] ?></textarea>
                     </div>
                 </div>
                 <div class="flex-container field">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-space"></div>
                     <div class="form-field">
-                        <input class="input-field" id="phonenumber" type="text" name="phonenumber" value=<?php echo "\"".$query_result_profile_edit["phone_number"]."\"" ?> onclick=this.select()>
+                        <input class="input-field" id="phone_number" type="text" name="phone_number" value=<?php echo "\"".$query_result_profile_edit["phone_number"]."\"" ?> onclick=this.select()>
                     </div>
                 </div>
                 <div class="change-button-container">
@@ -75,7 +75,7 @@
                         <button id="back-button" type="button" onclick="gotoprofile()">Back</button>
                     </div>
                     <div id="save-button-container">
-                        <button id="save-button">Save</button>
+                        <button type="submit" id="save-button" >Save</button>
                     </div>
                 </div>
             </div>

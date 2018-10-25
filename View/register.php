@@ -5,9 +5,17 @@
     <title>Pro-Book</title>
     <link rel="stylesheet" type="text/css" href="../View/CSS/style.css">
     <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
-    <link rel="stylesheet" type="text/css" href="../View/CSS/register.css">
 
 </head>
+
+<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
+  if (isset($_POST['register'])) {
+    require '../App/register.php';
+  }
+}
+?>
 
 <body>
 <div class="form">
@@ -15,7 +23,7 @@
         <div class="title">
             <div id="middle"><h1>REGISTER</h1></div>
         </div>
-        <form action="#" method="post" onsubmit="return validateRegister()">
+        <form action="register.php" method="post" onsubmit="return validateRegister()">
             <div class="flex-container flex-column register-form" id="register-form">
                 <div class="flex-container">
                     <div class="form-label">
@@ -34,8 +42,7 @@
                                onkeyup="checkUsername(this.value)"
                                placeholder="">
                     </div>
-                    <div class="unique-checker">
-                        <img id="first" /*src="../View/Src/register/v.png"*/ />
+                    <div class="unique-checker" id="check1">
                     </div>
                 </div>
                 <div class="flex-container">
@@ -46,8 +53,7 @@
                         <input class="fill" type="text" id="email" name="email" onclick=this.select();
                                onkeyup="checkEmail(this.value)" placeholder="">
                     </div>
-                    <div class="unique-checker">
-                        <img id="second" /*src="../View/Src/register/x.png"*/ />
+                    <div class="unique-checker" id="check2">
                     </div>
                 </div>
                 <div class="flex-container">
@@ -100,6 +106,6 @@
     </div>
 </div>
 </body>
-
 <script type="text/javascript" src="../View/JS/validate_register.js"></script>
+<script type="text/javascript" src="../View/JS/ajax-check.js"></script>
 </html>
