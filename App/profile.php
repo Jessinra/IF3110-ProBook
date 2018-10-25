@@ -6,7 +6,7 @@
         $user_name = "\"".$_POST['name']."\"";
         $user_address = "\"".$_POST['address']."\"";
         $user_phone_number = "\"".$_POST['phone_number']."\"";
-        if(isset($_FILES['img'])){
+        if(isset($_FILES['img']) && $_FILES['img']['name'] != ""){
             $profpic_dir = "../View/Src/profile/picture/";
             $target_name = $user_id.'.'.pathinfo($_FILES['img']['name'])['extension'];
             move_uploaded_file($_FILES['img']['tmp_name'], $profpic_dir.$target_name);
