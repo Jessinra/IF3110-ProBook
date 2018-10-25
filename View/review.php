@@ -17,7 +17,7 @@
     ?>
 </div>
 
-<!--MOCK DATA-->
+<!-- MOCK DATA
 <?php
 
 $book_details = array(
@@ -25,7 +25,7 @@ $book_details = array(
         "thumbnail" => "../View/Src/search_result/thumbnail_03.png",
         "author" => "Yamashita Kurada",
 )
-?>
+?> -->
 
 <div class="flex-container review-container">
     <div class="flex-container">
@@ -53,14 +53,16 @@ $book_details = array(
         </div>
     </div>
 
-    <form action="#" method="get">
+    <form action="../App/history.php" method="post">
         <div class="flex-container flex-column comment">
             <h2>Add Comment</h2>
             <textarea name="review" id=book-comment placeholder="Write your review here..."
                       onclick=this.select()></textarea>
+            <input type="hidden" name="order-number" id="order-number" value=<?php echo $id_trans?>>
+            <input type="hidden" name="book-id" id="book-id" value=<?php echo $book_id?>>
             <input type="hidden" name="rating" id="number-star" value=0>
             <div class="flex-container">
-                <a href="../View/history.php" id="button-back">
+                <a href="../App/history.php" id="button-back">
                     <button type="button">Back</button>
                 </a>
                 <a id="button-submit">
