@@ -6,8 +6,8 @@
     $book_reviews = find_reviews($mysqli, $book_id);
 
     // Redirect to 404 if not found
-    if (!$book_details || !$book_reviews){
-        header("Location: ../App/error_404.php");
+    if (!$book_details){
+        header("Location: ../App/404.php");
     }
 
     require_once '../View/detail.php';

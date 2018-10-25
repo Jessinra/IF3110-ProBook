@@ -25,5 +25,8 @@
         $query_result_profile['img'] = 'default.jpg';
     }
 
+    $relative_path_to_profile_pic = "../View/Src/Profile/Users/";
+    $query_result_profile['img'] = $relative_path_to_profile_pic. $query_result_profile['img'];
+
     require_once '../View/profile.php';
 ?>
