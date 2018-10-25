@@ -1,7 +1,7 @@
 <?php 
     require_once '../App/auth-validator.php';
 
-    $user_id = get_active_user_id()
+    $user_id = get_active_user_id();
 
     if(isset($_POST['order-number'])){
         $book_id = $_POST['book-id'];

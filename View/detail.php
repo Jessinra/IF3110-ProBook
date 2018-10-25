@@ -131,12 +131,14 @@ include("../View/booking_modal.php");
         var order_qty = document.getElementsByName("order-quantity")[0];
         order_qty = order_qty.value;
 
-        var url = "../App/book_order.php";
-        var payload = {
-            "order-quantity": order_qty,
-            "book_id": book_id
-        };
-        postAjax(url, payload, show_response);
+        if (book_id && order_qty) {
+            var url = "../App/book_order.php";
+            var payload = {
+                "order-quantity": order_qty,
+                "book_id": book_id
+            };
+            postAjax(url, payload, show_response);
+        }
     }
 </script>
 

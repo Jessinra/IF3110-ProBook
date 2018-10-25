@@ -17,16 +17,6 @@
     ?>
 </div>
 
-<!-- MOCK DATA
-<?php
-
-$book_details = array(
-        "title" => "Megumi are kawai!",
-        "thumbnail" => "../View/Src/search_result/thumbnail_03.png",
-        "author" => "Yamashita Kurada",
-)
-?> -->
-
 <div class="flex-container review-container">
     <div class="flex-container">
         <div class="flex-column review-book-detail">
