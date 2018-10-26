@@ -47,7 +47,9 @@ Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memu
 ### Book Detail page
 
 ![](mocks/screenshot/book-detail1.JPG)
-![](mocks/screenshot/book-detail2.JPG)
+![](mocks/screenshot/book-detail2.png)
+![](mocks/screenshot/book-detail1.png)
+
 
 ![](mocks/screenshot/book-order.JPG)
 
@@ -72,8 +74,8 @@ Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memu
 ## Pembagian Kerja
 
 **Tampilan**
-1. Login : 13516079
-2. Register : 13516079
+1. Login : 13516079, 13516112
+2. Register : 13516079, 13516112
 3. Search : 13516112
 4. Search with result : 13516112
 5. History : 13516112
@@ -81,14 +83,15 @@ Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memu
 7. Book detail : 13516112
 8. Review : 13516112
 9. Profile : 13516010
-10. Edit Profile : 13516010
+10. Edit Profile : 13516010, 13516112
 11. Error 404 : 13516112
+12. Order Modal : 13516112
 
 **Fungsionalitas**
-1. Login : 13516079
+1. Login : 13516079, 13516112
 2. Register : 13516079
-3. Search : 13516079
-4. Search with result : 13516079
+3. Search : 13516112
+4. Search with result : 13516112
 5. History : 13516079
 6. Logout : 13516112
 7. Book detail : 13516112

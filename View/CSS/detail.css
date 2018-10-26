@@ -6,7 +6,7 @@
     font-family: "Linotte", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     font-size: 120%;
-    color: white;
+    /*color: white;*/
 }
 
 .book-details {
@@ -69,15 +69,15 @@ input[type="number"] {
 }
 
 .book-order h2, .book-review h2 {
-    color: white;
+    /*color: white;*/
     /*THE REAL COLOR SHOULD BE:*/
-    /*color: #00374c;*/
+    color: #00374c;
     font-size: 240%;
     margin: 10% 0 2% 0;
 }
 
 .order-quantity [type="number"] {
-    border: 0;
+    border: solid 2px #605e5f;
     padding: 1%;
     margin: 0 0 0 3%;
     width: 10%;
