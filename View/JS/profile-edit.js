@@ -30,7 +30,7 @@ function validate(){
     var name = document.getElementById('name');
     var address = document.getElementById('address');
     var isAllTrue = true;
-    if(name.value.length == 0){
+    if(name.value.length == 0 || name.value.length > 20){
         name.style.borderColor = "red";
         isAllTrue = false;
     }
