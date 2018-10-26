@@ -44,6 +44,8 @@ Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memu
 
 ![](mocks/screenshot/search-result.JPG)
 
+
+
 ### Book Detail page
 
 ![](mocks/screenshot/book-detail1.JPG)
@@ -68,6 +70,8 @@ Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memu
 ### Edit Profile page
 
 ![](mocks/screenshot/profile-edit.JPG)
+
+
 
 ## Pembagian Kerja
 
