@@ -8,24 +8,24 @@
 
 **Tony - 13516010**
 
-## Tampilan dan Cara Penggunaan Web
+## Tampilan dan Deskripsi Web
 
 ### Login
 
-![](mocks/screenshot/login.jpg)
+![](mocks/screenshot/login.JPG)
 
 Halaman ini digunakan user untuk dapat masuk ke akun pengguna.
 
 ### Register
 
-![](mocks/screenshot/login.jpg)
+![](mocks/screenshot/register.JPG)
 
 Halaman ini digunakan user untuk mendaftarkan akun pengguna.
 Dengan mengisi semua field yang ada dan menekan tombol **register**.
 
 ### Header Web
 
-![](mocks/screenshot/header.jpg)
+![](mocks/screenshot/header.JPG)
 
 Halaman ini digunakan user untuk melakukan navigasi terhapap web.
 - **Browse**: Tombol yang digunakan untuk memasuki halaman search.
@@ -35,7 +35,39 @@ Halaman ini digunakan user untuk melakukan navigasi terhapap web.
 
 ### Search Page
 
+![](mocks/screenshot/search.JPG)
 
+Halaman ini digunakan untuk melakukan pencarian buku.
+Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memulai pencarian
+
+### Search Result Page
+
+![](mocks/screenshot/search-result.JPG)
+
+### Book Detail page
+
+![](mocks/screenshot/book-detail1.JPG)
+![](mocks/screenshot/book-detail2.JPG)
+
+![](mocks/screenshot/book-order.JPG)
+
+
+### History page
+
+![](mocks/screenshot/history.JPG)
+
+### Review page
+
+![](mocks/screenshot/review1.JPG)
+![](mocks/screenshot/review2.JPG)
+
+### Profile page
+
+![](mocks/screenshot/profile.JPG)
+
+### Edit Profile page
+
+![](mocks/screenshot/profile-edit.JPG)
 
 ## Pembagian Kerja
 
