@@ -118,8 +118,7 @@
                      books.title as title
                      FROM transactions 
                      JOIN books on transactions.book_id=books.id
-                     WHERE transactions.user_id = $user_id
-                     ORDER BY order_date ASC";
+                     WHERE transactions.user_id = $user_id";
         $query_result = $mysqli->query($query_string);
 
         $idx = 0;
@@ -135,6 +134,7 @@
                 'order-number' => $transaction['id']
             );
         }
+        $search_result = array_reverse($search_result);
         return $search_result;
     }
 
