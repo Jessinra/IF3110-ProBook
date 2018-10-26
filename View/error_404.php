@@ -10,12 +10,7 @@
 </head>
 <body>
 
-<div class="header">
-    <?php
-    include("../View/header.php");
-    include("../View/nav-bar.html");
-    ?>
-</div>
+<?php include("../View/header.php"); ?>
 
 <div class="flex-container error_display">
     <img src="../View/Src/error/404.jpg" alt="error_page">

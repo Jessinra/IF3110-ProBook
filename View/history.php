@@ -10,12 +10,7 @@
 </head>
 <body>
 
-<div class="header">
-    <?php
-    include("../View/header.php");
-    include("../View/nav-bar.html");
-    ?>
-</div>
+<?php include("../View/header.php"); ?>
 
 <div class="page-title">
     <h1 id="page-title-search">History</h1>
@@ -35,11 +30,11 @@
                 <span id="amount">Jumlah : <?php echo $query_entry['amount'] ?></span><br>
                 <span id="review">
                     <?php
-                    if ($query_entry['review']) {
-                        echo "Anda sudah memberikan review";
-                    } else {
-                        echo "Belum direview";
-                    }
+                        if ($query_entry['review']) {
+                            echo "Anda sudah memberikan review";
+                        } else {
+                            echo "Belum direview";
+                        }
                     ?>
                 </span>
             </div>
@@ -51,11 +46,11 @@
                 <span id="order-number">Nomor Order: #<?php echo $query_entry['order-number'] ?></span>
             </div>
             <?php
-            if (!$query_entry['review']) { ?>
-                <a href=<?php echo "\"../App/review.php?order-number=".$query_entry['order-number']."\"" ?> >
-                    <button class="search-result button">Review</button>
-                </a>
-            <?php } ?>
+                if (!$query_entry['review']) { ?>
+                    <a href=<?php echo "\"../App/review.php?order-number=" . $query_entry['order-number'] . "\"" ?>>
+                        <button class="search-result button">Review</button>
+                    </a>
+                <?php } ?>
         </div>
     </div>
 <?php } ?>

@@ -1,18 +1,15 @@
 <?php
 
-require_once "../Model/mysqli.php";
+    require_once "../Model/mysqli.php";
 
-//decode post data into array, DON'T CHANGE ANY OF THESE
-$payload = json_decode($_POST['payload'], true);
+    $largest_used_id = get_largest_id("transactions");
+    $payload = json_decode($_POST['payload'], true);
+    $transaction = array(
+        "id" => ++$largest_used_id,
+        "user_id" => get_active_user_id(),
+        "book_id" => $payload['book_id'],
+        "amount" => $payload['order-quantity'],
+    );
 
-//Process order
-$largest_used_id = get_largest_id("transactions");
-$transaction = array(
-    "id" => ++$largest_used_id,
-    "user_id" => get_active_user_id(),
-    "book_id" => $payload['book_id'],
-    "amount" => $payload['order-quantity'],
-);
-
-add_transaction($transaction);
-echo $transaction['id'];
+    add_transaction($transaction);
+    echo $transaction['id'];

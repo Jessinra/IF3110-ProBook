@@ -1,16 +1,13 @@
-/*html{*/
-    /*width: 100%*/
-/*}*/
 
-.modal{
+.modal {
     z-index: 1;
     background-color: RGBA(0, 0, 0, 0.75);
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    display:none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
 
     justify-content: center;
     align-items: center;
@@ -18,7 +15,7 @@
     font-weight: 100;
 }
 
-.booking-modal{
+.booking-modal {
     flex-flow: column;
     background: #FFFFFF;
     color: #272727;
@@ -30,28 +27,28 @@
     border: #00374C solid 1px;
 }
 
-.booking-modal .close-button{
+.booking-modal .close-button {
     align-self: flex-end;
 }
 
-.booking-modal .close-button button{
+.booking-modal .close-button button {
     background: transparent;
     border: 0;
     font-size: 125%;
     color: #605e5f;
 }
 
-.booking-modal .close-button button:focus{
+.booking-modal .close-button button:focus {
     outline: none;
 }
 
-.modal-content{
+.modal-content {
     align-items: center;
     margin-bottom: 5%;
 }
 
-.modal-content .thumbnail{
-    flex-grow:1;
+.modal-content .thumbnail {
+    flex-grow: 1;
     flex-basis: 0;
     align-items: center;
     justify-content: center;
@@ -67,13 +64,13 @@
     border: 2px #000000;
 }
 
-.modal-content .details{
-    flex-grow:5;
+.modal-content .details {
+    flex-grow: 5;
     flex-basis: 0;
     flex-flow: column;
     justify-content: center;
 }
 
-.modal-content .details .status{
+.modal-content .details .status {
     font-weight: bold;
 }

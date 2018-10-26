@@ -9,11 +9,11 @@
     background-color: #f26600;
 }
 
-.nav-bar a{
+.nav-bar a {
     flex-grow: 1;
 }
 
-.nav-button, .header-bar{
+.nav-button, .header-bar {
     border: 0;
     color: #ffffff;
     font-family: "Arial", sans-serif;
@@ -78,7 +78,7 @@
     flex-grow: 1;
 }
 
-.header-bar .power-button a{
+.header-bar .power-button a {
     display: flex;
     max-height: 100%;
 }

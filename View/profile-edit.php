@@ -10,12 +10,7 @@
 </head>
 
 <body onresize="resizeEvent()">
-<div class="header">
-    <?php
-    include("../View/header.php");
-    include("../View/nav-bar.html");
-    ?>
-</div>
+<?php include("../View/header.php"); ?>
 
 <div class="content">
     <div class="title">
@@ -48,7 +43,7 @@
                 <div class="form-space"></div>
                 <div class="form-field">
                     <input class="input-field" id="name" type="text" name="name" title="name"
-                           value=<?php echo "\"" . $query_result_profile_edit["name"] . "\"" ?> onclick=this.select()>
+                           value="<?php echo $query_result_profile_edit["name"] ?>" onclick=this.select()>
                 </div>
             </div>
             <div class="flex-container field">
@@ -68,7 +63,7 @@
                 <div class="form-space"></div>
                 <div class="form-field">
                     <input class="input-field" id="phone_number" type="text" name="phone_number" title="phone_number"
-                           value=<?php echo "\"" . $query_result_profile_edit["phone_number"] . "\"" ?> onclick=this.select()>
+                           value="<?php echo $query_result_profile_edit["phone_number"] ?>" onclick=this.select()>
                 </div>
             </div>
             <div class="change-button-container">

@@ -1,35 +1,36 @@
 <?php
 
-require_once '../App/auth-validator.php';
+    require_once '../Controller/auth-validator.php';
 
-if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['address']) &&
-isset($_POST['phone_number'])){
-    $name = $mysqli->escape_string($_POST['name']);
-    $username = $mysqli->escape_string($_POST['username']);
-    $email = $mysqli->escape_string($_POST['email']);
-    $password = $mysqli->escape_string($_POST['password']);
-    $address = $mysqli->escape_string($_POST['address']);
-    $phone_number = $mysqli->escape_string($_POST['phone_number']);
-
-    $sql = "INSERT INTO users (username, password, email, name, phone_number, address)" .
-            "VALUES ('$username', '$password', '$email', '$name', '$phone_number', '$address')";
-
-    if ($mysqli->query($sql)){
-        $result = $mysqli->query("SELECT * FROM users WHERE username='$username'");
-        $user = $result->fetch_assoc();
-        $access_token = setAuthenticated();
-        add_active_user($user, $access_token);
-        header('Location: search.php');
+    function is_register_parameter_complete() {
+        return
+            isset($_POST['name']) &&
+            isset($_POST['username']) &&
+            isset($_POST['email']) &&
+            isset($_POST['password']) &&
+            isset($_POST['address']) &&
+            isset($_POST['phone_number']);
     }
-    else{
-        registerFailedHandler();
+
+    function registerFailedHandler() {
+        $message = "Registration Failed!";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+
+        header("location: ../App/register.php");
     }
-}
 
-function registerFailedHandler()
-{
-    $message = "Registration Failed!";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-}
+    if (is_register_parameter_complete()) {
 
-require_once "../View/register.php";
+        $username = add_new_user();
+        if ($username) {
+            $user = findUser($username);
+            $access_token = setAuthenticated();
+            add_active_user($user, $access_token);
+            header('Location: search.php');
+        } else {
+            registerFailedHandler();
+        }
+    }
+
+
+    require_once "../View/register.php";

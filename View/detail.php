@@ -11,12 +11,7 @@
 </head>
 <body>
 
-<div class="header">
-    <?php
-    include("../View/header.php");
-    include("../View/nav-bar.html");
-    ?>
-</div>
+<?php include("../View/header.php"); ?>
 
 <div class="flex-container detail-container">
     <div class="flex-container">
@@ -98,7 +93,7 @@
 
 
 <?php
-include("../View/booking_modal.php");
+    include("../View/booking_modal.php");
 ?>
 <input type="hidden" id="hidden_book_id" value="<?php echo $_GET['id'] ?>">
 

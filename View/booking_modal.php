@@ -1,4 +1,3 @@
-
 <div class="flex-container modal" id="booking-modal">
     <div class="flex-container booking-modal">
         <div class="close-button">
@@ -10,7 +9,8 @@
             </div>
             <div class="flex-container details">
                 <div class="flex-container status">Pemesanan Berhasil!</div>
-                <div class="flex-container nomor-transaksi">Nomor Transaksi:&nbsp<span id="modal-nomor-transaksi"></span></div>
+                <div class="flex-container nomor-transaksi">Nomor Transaksi:&nbsp<span
+                            id="modal-nomor-transaksi"></span></div>
             </div>
         </div>
     </div>
