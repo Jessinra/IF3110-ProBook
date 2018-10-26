@@ -9,12 +9,7 @@
 </head>
 <body>
 
-<div class="header">
-    <?php
-    include("../View/header.php");
-    include("../View/nav-bar.html");
-    ?>
-</div>
+<?php include("../View/header.php"); ?>
 
 
 </body>
@@ -22,7 +17,7 @@
 <script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
 <script>
-    window.onload = function(){
+    window.onload = function () {
         switch_to_browse();
     };
 </script>

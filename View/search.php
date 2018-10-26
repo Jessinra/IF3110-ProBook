@@ -8,22 +8,17 @@
     <link rel="stylesheet" href="../View/CSS/style.css">
     <link rel="stylesheet" href="../View/CSS/search.css">
 </head>
+
 <body>
-
-<div class="header">
-    <?php
-    include("../View/header.php");
-    include("../View/nav-bar.html");
-    ?>
-</div>
-
+<?php include("../View/header.php"); ?>
 <div class="page-title">
     <h1 id="page-title-search">Search Book</h1>
 </div>
 <div class="container search-bar">
     <form action="../App/search-result.php" method="get">
         <div class="search-bar field">
-            <input type="text" id="form-search-query" name="query" placeholder="Input search terms..." onclick="this.select()"/>
+            <input type="text" id="form-search-query" name="query" placeholder="Input search terms..."
+                   onclick="this.select()"/>
         </div>
 
         <button class="search-bar button" type="submit">Search</button>

@@ -1,6 +1,8 @@
 <!--Make nav bar static at top-->
 
-window.onscroll = function() {stick_nav_to_top()};
+window.onscroll = function () {
+    stick_nav_to_top()
+};
 
 let nav_bar = document.getElementsByClassName("nav-bar")[0];
 let sticky_nav_bar = nav_bar.offsetTop;

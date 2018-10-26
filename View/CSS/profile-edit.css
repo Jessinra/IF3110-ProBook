@@ -1,14 +1,14 @@
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#user-image{
+#user-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.image-container{
+.image-container {
     width: 100%;
     height: 145px;
     border: solid 2px;
@@ -17,12 +17,12 @@ html{
 
 }
 
-.form-label{
+.form-label {
     flex-basis: 0;
     flex-grow: 26;
 }
 
-.form-field{
+.form-field {
     flex-basis: 0;
     /* align-items: left; */
     /* width: 56%; */
@@ -31,43 +31,40 @@ html{
     display: flex;
 }
 
-.form-space{
+.form-space {
     flex-basis: 0;
     flex-grow: 4;
     /* width: 4%; */
 }
 
-.special-field{
+.special-field {
     display: flex;
     flex-flow: column;
-    position: relative;
     justify-content: center;
-
 }
 
-.field{ 
-    width : 100%;
+.field {
+    width: 100%;
     height: auto;
     margin-bottom: 7px;
     font-size: 120%
 }
 
-
-.field.image-field{
+.field.image-field {
     margin-bottom: 30px;
 }
 
-.content{
+.content {
     margin: 0 3%;
 }
 
-.input-field{
+.input-field {
     padding: 3px 5px;
-    width : 100%;
+    width: 100%;
 }
 
-textarea{
-    width : 100%;
+textarea {
+    width: 100%;
     /*height: 80px;*/
     padding: 2%;
     min-height: 7em;
@@ -86,29 +83,29 @@ textarea{
     box-shadow: none;
 }
 
-#file-upload-interface{
+#file-upload-interface {
     margin-top: 10px;
-    height:18%;
+    height: 18%;
 }
 
-#file-upload-label-container{
+#file-upload-label-container {
     display: flex;
     flex-basis: 0;
     flex-grow: 78;
 }
 
-#file-upload-button-container{
+#file-upload-button-container {
     display: flex;
     flex-basis: 0;
     flex-grow: 22;
 }
 
-#file-upload-label{
+#file-upload-label {
     width: 100%;
     margin-right: 4%;
 }
 
-button{
+button {
     background: none;
     color: inherit;
     border: none;
@@ -119,7 +116,7 @@ button{
     height: auto;
 }
 
-#file-upload-button{
+#file-upload-button {
     background-color: #ececec;
     border-width: 1px;
     border-style: solid;
@@ -127,31 +124,31 @@ button{
     border-radius: 7px / 3px;
 }
 
-.change-button-container{
+.change-button-container {
     margin-top: 40px;
     font-size: 1.5em;
 }
 
-.change-button-container button{
+.change-button-container button {
     font-size: inherit;
     width: 120%;
 }
 
-#back-button-container{
+#back-button-container {
     height: 33px;
     width: 22%;
     display: flex;
     float: left;
 }
 
-#save-button-container{
+#save-button-container {
     height: 33px;
     width: 22%;
     display: flex;
     float: right;
 }
 
-#back-button{
+#back-button {
     background-color: white;
     color: #d9534f;
     border-width: 1px;
@@ -160,13 +157,13 @@ button{
     border-radius: 5px;
 }
 
-#back-button:hover{
+#back-button:hover {
     background-color: #d9534f;
     border: 0;
     color: white;
 }
 
-#save-button{
+#save-button {
     background-color: #0094cc;
     color: #FFFFFF;
     border-width: 1px;
@@ -175,7 +172,7 @@ button{
     border-radius: 5px;
 }
 
-#save-button:hover{
+#save-button:hover {
     background-color: #f26600;
     border: 0;
     color: #FFFFFF;

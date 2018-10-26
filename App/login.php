@@ -1,37 +1,28 @@
 <?php
+    require_once '../Controller/auth-validator.php';
 
-require_once '../App/auth-validator.php';
-
-
-if (isset($_POST['username'])) {
-
-    $username = $mysqli->escape_string($_POST['username']);
-    $user = findUser($username);
-
-    if ($user != null) {
-        if (isPasswordMatch($_POST['password'], $user)) {
-            $access_token = setAuthenticated();
-            add_active_user($user, $access_token);
-            header('Location: search.php');
-        }
-        else{
-            loginFailedHandler();
-        }
+    function is_password_match($input_password, $user) {
+        return $input_password == $user['password'];
     }
-    else{
-        loginFailedHandler();
+
+    function login_failed_handler() {
+        $message = "Username/password salah!";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
-}
 
-function isPasswordMatch($input_password, $user)
-{
-    return $input_password == $user['password'];
-}
+    if (isset($_POST['username'])) {
 
-function loginFailedHandler()
-{
-    $message = "Username/password salah!";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-}
+        $username = $mysqli->escape_string($_POST['username']);
+        $user = findUser($username);
 
-require_once '../View/login.php';
+        if ($user) {
+            if (is_password_match($_POST['password'], $user)) {
+                $access_token = setAuthenticated();
+                add_active_user($user, $access_token);
+                header('Location: search.php');
+            }
+        }
+        login_failed_handler();
+    }
+
+    require_once '../View/login.php';
