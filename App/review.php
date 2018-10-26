@@ -8,7 +8,6 @@
         $query_string_trans = "SELECT `book_id` FROM `transactions` WHERE `id`=$id_trans AND `user_id`=$user_id AND `is_review`=0;";
         $query_result_trans = $mysqli->query($query_string_trans);
         if($query_result_trans->num_rows==1){
-
             $book_id = $query_result_trans->fetch_assoc()["book_id"];
             $query_string_book = "SELECT `title`, `author`, `img` FROM `books` WHERE `id`=$book_id;";
             $query_result_book = $mysqli->query($query_string_book)->fetch_assoc();
