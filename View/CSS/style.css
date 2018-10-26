@@ -4,7 +4,7 @@
 }
 
 html {
-    background: url("../Src/background/64633879_p0.jpg") fixed;
+    /*background: url("../Src/background/64633879_p0.jpg") fixed;*/
     background-size: 1640px 922px;
     padding-top: 100px;
     overflow-y: scroll;
