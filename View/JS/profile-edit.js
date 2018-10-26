@@ -41,13 +41,13 @@ function validate(){
         isAllTrue = false;
     }
     else
-        address.style.borderColor = "initial";
+        phone_number.style.borderColor = "initial";
     if(address.length==0){
         address.style.borderColor = "red";
         isAllTrue = false;
     }
     else
-        address.style.borderColor = "initial";
+        address.style.borderColor = "#a9a9a9";
     return isAllTrue;
 }
 
