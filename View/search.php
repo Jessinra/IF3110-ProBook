@@ -21,7 +21,7 @@
     <h1 id="page-title-search">Search Book</h1>
 </div>
 <div class="container search-bar">
-    <form action="../App/search-result.php" method="get">
+    <form action="../App/search-result.php" method="get" onsubmit="return validate_search();">
         <div class="search-bar field">
             <input type="text" id="form-search-query" name="query" placeholder="Input search terms..." onclick="this.select()"/>
         </div>
@@ -37,6 +37,7 @@
 
 <script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
+<script type="text/javascript" src="../View/JS/validate-search.js"></script>
 <script>
     window.onload = function () {
         switch_to_browse();
