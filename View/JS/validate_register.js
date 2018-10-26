@@ -1,23 +1,14 @@
 // Validate without checking database
 function validateRegister() {
-    try{
-        console.log(validateName());
-        console.log(validateUsername());
-        console.log(validateEmail());
-        console.log(validatePass());
-        console.log(validateCoPass());
-        console.log(validatePhoneNumber());
-        console.log(validateAddress());
-
-        return validateUsername() && validatePass() && validateName()
-            && validatePhoneNumber() && validateEmail() && validateCoPass() && validateAddress();
-    }
-    catch (e) {
-        console.log("exception raised", e);
-        return false;
-    }
-
-
+    validateName();
+    validateUsername();
+    validateEmail();
+    validatePass();
+    validateCoPass();
+    validatePhoneNumber();
+    validateAddress();
+    return validateUsername() && validatePass() && validateName()
+        && validatePhoneNumber() && validateEmail() && validateCoPass() && validateAddress();
 }
 
 function validateName() {
@@ -48,16 +39,10 @@ function validateName() {
 
 function validateUsername() {
     var inName = "username";
-    if (document.getElementById(inName).value !== "") {
-
-        if (document.getElementById('cun').src.substr(document.getElementById('cun').src.length - 5) === 'v.png') {
-            document.getElementById(inName).placeholder = "Username not available!";
-            document.getElementById(inName).value = "";
-        }
-        document.getElementById(inName).style.borderColor = "red";
+    if (document.getElementById(inName).value !== "" && document.getElementById('cun').src.substr(document.getElementById('cun').src.length - 5) === '../View/Src/register/v.png') {
         document.getElementById(inName).style.borderWidth = "2px";
-        return false;
-
+        document.getElementById(inName).style.borderColor = "#02702c";
+        return true;
     }
     else {
         document.getElementById(inName).style.borderColor = "red";
@@ -70,13 +55,12 @@ function validateUsername() {
 function validateEmail() {
     var inName = "email";
     if (document.getElementById(inName).value !== "") {
-        if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(document.getElementById(inName).value)) {
+        if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(document.getElementById(inName).value) && document.getElementById('cem').src.substr(document.getElementById('cem').src.length - 5) === '../View/Src/register/v.png') {
             document.getElementById(inName).style.borderWidth = "2px";
             document.getElementById(inName).style.borderColor = "#02702c";
             return true;
         } else {
-
-            if (document.getElementById('cem').src.substr(document.getElementById('cem').src.length - 5) === 'v.png') {
+            if (document.getElementById('cem').src.substr(document.getElementById('cem').src.length - 5) === '../View/Src/register/v.png') {
                 document.getElementById(inName).placeholder = "Incorrect email format!";
                 document.getElementById(inName).value = "";
             }

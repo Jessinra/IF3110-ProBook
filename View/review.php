@@ -37,10 +37,10 @@
         </div>
     </div>
 
-    <form action="../App/history.php" method="post">
+    <form action="../App/history.php" method="post" onsubmit="return validate_review();">
         <div class="flex-container flex-column comment">
             <h2>Add Comment</h2>
-            <textarea name="review" id=book-comment placeholder="Write your review here..."
+            <textarea name="review" id="book-comment" placeholder="Write your review here..."
                       onclick=this.select()></textarea>
 
             <input type="hidden" name="order-number" id="order-number" value=<?php echo $transaction_id ?>>
@@ -63,6 +63,7 @@
 <script type="text/javascript" src="../View/JS/fixed-nav-bar.js"></script>
 <script type="text/javascript" src="../View/JS/switch_pages.js"></script>
 <script type="text/javascript" src="../View/JS/star-rating.js"></script>
+<script type="text/javascript" src="../View/JS/validate-review.js"></script>
 <script>
     window.onload = function () {
         switch_to_history();
