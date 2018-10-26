@@ -42,7 +42,7 @@ function validate(){
     }
     else
         phone_number.style.borderColor = "initial";
-    if(address.length==0){
+    if(address.value.length==0){
         address.style.borderColor = "red";
         isAllTrue = false;
     }
