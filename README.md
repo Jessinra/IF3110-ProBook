@@ -142,7 +142,7 @@ Terdapat tombol **Back** yang dapat ditekan untuk membatalkan perubahan data. Da
 
 **Fungsionalitas**
 1. Login : 13516079, 13516112
-2. Register : 13516079
+2. Register : 13516079, 13516112
 3. Search : 13516112
 4. Search with result : 13516112
 5. History : 13516079
