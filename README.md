@@ -2,11 +2,11 @@
 
 ## Anggota
 
-**Harry Setiawan Hamjaya - 13516112**
-
-**Jessin Donyson - 13516079**
-
 **Tony - 13516010**
+
+**Harry Setiawan Hamjaya - 135161079**
+
+**Jessin Donyson - 13516112**
 
 ## Tampilan dan Deskripsi Web
 
@@ -75,8 +75,30 @@ Dengan inputnya sebagai nama dari buku lalu menekan tombol **Search** untuk memu
 
 ## Pembagian Kerja
 
-|Nama  |Pembagian|
-|------|--------|
-|Harry |tidak ada|
-|Jessin|tidak ada|
-|Tony  |semua|
+**Tampilan**
+1. Login : 13516079
+2. Register : 13516079
+3. Search : 13516112
+4. Search with result : 13516112
+5. History : 13516112
+6. Header : 13516112
+7. Book detail : 13516112
+8. Review : 13516112
+9. Profile : 13516010
+10. Edit Profile : 13516010
+11. Error 404 : 13516112
+
+**Fungsionalitas**
+1. Login : 13516079
+2. Register : 13516079
+3. Search : 13516079
+4. Search with result : 13516079
+5. History : 13516079
+6. Logout : 13516112
+7. Book detail : 13516112
+8. Review : 13516010
+9. Profile : 13516010
+10. Edit Profile : 13516010
+11. Order Book : 13516112
+12. Auth Validator : 13516079
+14. Database : 13516079
