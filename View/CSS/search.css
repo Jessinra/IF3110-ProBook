@@ -11,7 +11,7 @@
 
 #search-result-found {
     flex-grow: 1;
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
     align-self: center;
     font-family: "Arial", sans-serif;
     font-size: 120%;
